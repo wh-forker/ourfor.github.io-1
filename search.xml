@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>树莓派系统整理</title>
+      <link href="undefined2018/02/07/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E6%95%B4%E7%90%86/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>Raspberry Pi是一款针对电脑业余爱好者、教师、小学生以及小型企业等用户的迷你电脑，预装Linux系统，体积仅信用卡大小，搭载ARM架构处理器，运算性能和智能手机相仿。<br>在接口方面，Raspberry Pi提供了可供键鼠使用的USB接口，此外还有快速以太网接口、SD卡扩展接口以及1个HDMI高清视频输出接口，可与显示器或者TV相连,目前树莓派的系统比较多大概分为<code>Linux</code>和<code>Android</code>两类（除了那个假的Windows10），可玩性比较高，下面整理了一下好用的系统。<br><a id="more"></a></p><table><thead><tr><th style="text-align:center">微型计算机</th><th>游戏机</th><th style="text-align:center">影音盒子</th><th>音响播放器</th><th style="text-align:center">路由器</th><th>NAS</th></tr></thead><tbody><tr><td style="text-align:center">Raspbian,Ubuntu MATE,Ubuntu Core,Windows 10 IoT Core,DietPi,Flint OS</td><td>Lakka,Recalbox</td><td style="text-align:center">OSMC,emteria.OS</td><td>Runeaudio</td><td style="text-align:center">LEDE,OpenWrt</td><td>openmediavault</td></tr></tbody></table><ul><li><a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="noopener">Raspbian</a></li><li><a href="https://ubuntu-mate.org/raspberry-pi/" target="_blank" rel="noopener">Ubuntu MATE</a></li><li><a href="https://developer.ubuntu.com/core/get-started/raspberry-pi-2-3" target="_blank" rel="noopener">Ubuntu Core</a></li><li><a href="https://developer.microsoft.com/en-us/windows/iot/getstarted" target="_blank" rel="noopener">Windows 10 IoT Core</a></li><li><a href="http://www.dietpi.com" target="_blank" rel="noopener">DietPi</a>  </li><li><a href="https://flintos.com/" target="_blank" rel="noopener">Flint OS</a></li><li><a href="http://www.lakka.tv" target="_blank" rel="noopener">Lakka</a></li><li><a href="https://www.recalbox.com" target="_blank" rel="noopener">Recalbox</a></li><li><a href="https://osmc.tv" target="_blank" rel="noopener">OSMC</a></li><li><a href="https://emteria.com" target="_blank" rel="noopener">emteria.OS</a></li><li><a href="http://www.runeaudio.com" target="_blank" rel="noopener">Runeaudio</a></li><li><a href="http://www.openmediavault.org" target="_blank" rel="noopener">openmediavault</a></li><li><a href="https://openwrt.org" target="_blank" rel="noopener">OpenWrt</a>    </li></ul><p><a href="http://ozkg680jm.bkt.clouddn.com/T-ara-Lovey-Dovey.flac" target="_blank" rel="noopener">http://ozkg680jm.bkt.clouddn.com/T-ara-Lovey-Dovey.flac</a></p><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div><script>var ap = new APlayer({element: document.getElementById("aplayer0"),narrow: false,autoplay: false,showlrc: 0,music: {title: "她的睫毛",author: "周杰伦",url: "http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3",pic: "http://home.ustc.edu.cn/~mmmwhy/jay.jpg",}});window.aplayers || (window.aplayers = []);window.aplayers.push(ap);</script>]]></content>
+      
+      
+        <tags>
+            
+            <tag> RasPi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>树莓派刷LEDE</title>
+      <link href="undefined2018/01/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%88%B7LEDE/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>树莓派是一个卡片大小的微型电脑，价格在100~300以内，之前再小米商城看了看最新款的小米路由器和小米盒子（小米盒子和小米路由器确实不错）不过我手头有一个树莓派3B，最近闲来无事，就去OpenWrt上面看了看，好像还没有正式适配树莓派3B，不过它的衍生系统LEDE，于是乎就开始刷LEDE了。<br><a id="more"></a></p><h1 id="Raspberry-pi-3B刷LEDE"><a href="#Raspberry-pi-3B刷LEDE" class="headerlink" title="Raspberry pi 3B刷LEDE"></a>Raspberry pi 3B刷LEDE</h1><h2 id="下载最新开源镜像"><a href="#下载最新开源镜像" class="headerlink" title="下载最新开源镜像"></a>下载最新开源镜像</h2><h3 id="LEDE项目官网"><a href="#LEDE项目官网" class="headerlink" title="LEDE项目官网"></a>LEDE项目官网</h3><p><a href="https://lede-project.org/zh/start" target="_blank" rel="noopener">https://lede-project.org/zh/start</a><br>你可以下载源码自己编译，也可以下载编译好的固件。LEDE也是有不少优点的：</p><ul><li>可扩展性</li><li>高安全性</li><li>高性能、高稳定性</li><li>强大的社区支持</li><li><p>开源/无额外支出</p><h3 id="支持的硬件"><a href="#支持的硬件" class="headerlink" title="支持的硬件"></a>支持的硬件</h3><p><a href="https://lede-project.org/toh/start" target="_blank" rel="noopener">https://lede-project.org/toh/start</a><br><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-1.png" width="70%" height="30%"><br>目前小米路由器有三款可以刷LEDE，不过似乎没有必要，因为小米路由器的系统本身就是基于OpenWrt定制的，并且配合小米WIFI客户端使用体验还是非常棒的。树莓派目前所有的型号都支持LEDE，不过如果你真要用树莓派做路由器使用，建议你买几个USB网卡，不然这自带的无线网卡发射的信号可没那么强。    </p><p>  0   型号：                   WiKi网址：                                                                固件下载地址：<br>  1    Xiaomi    mini            <a href="https://wiki.openwrt.org/toh/xiaomi/mini" target="_blank" rel="noopener">https://wiki.openwrt.org/toh/xiaomi/mini</a><br>  2    Xiaomi    MiWiFi Nano        <a href="https://wiki.openwrt.org/toh/xiaomi/nano" target="_blank" rel="noopener">https://wiki.openwrt.org/toh/xiaomi/nano</a><br>  3    Xiaomi    MiWiFi 3G<br>  4    Raspberry Pi A          <a href="https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank" rel="noopener">https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi</a><br>  5    Raspberry Pi B          <a href="https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank" rel="noopener">https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi</a><br>  6    Raspberry Pi 3B<br>  7    Raspberry Pi B+         <a href="https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank" rel="noopener">https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi</a><br>  8    Raspberry Pi 2B         <a href="https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank" rel="noopener">https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi</a><br>  9    Raspberry Pi Zero W     <a href="https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank" rel="noopener">https://wiki.openwrt.org/toh/raspberry_pi_foundation/raspberry_pi</a><br>LEDE支持的设备的固件都可以在这里下载：<a href="https://lede-project.org/toh/views/toh_fwdownload" target="_blank" rel="noopener">https://lede-project.org/toh/views/toh_fwdownload</a><br>由于我用的是树莓派3B，所以这里提供最新（20180123）的固件：<a href="https://downloads.lede-project.org/releases/17.01.4/targets/brcm2708/bcm2710/lede-17.01.4-brcm2708-bcm2710-rpi-3-ext4-sdcard.img.gz" target="_blank" rel="noopener">https://downloads.lede-project.org/releases/17.01.4/targets/brcm2708/bcm2710/lede-17.01.4-brcm2708-bcm2710-rpi-3-ext4-sdcard.img.gz</a><br>这个固件大小为8.5m，在macOS中双击打开会得到一个大小为297.8m后缀名为img的镜像文件；在Windows下面用RAR解压打开也是如此<br><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-2.png" width="70%" height="30%"></p></li></ul><h2 id="烧写镜像到SD卡"><a href="#烧写镜像到SD卡" class="headerlink" title="烧写镜像到SD卡"></a>烧写镜像到SD卡</h2><h3 id="Windows平台"><a href="#Windows平台" class="headerlink" title="Windows平台"></a>Windows平台</h3><p>Windows下面可以用诸如软碟通,Refuse等软件一键烧写，方法比较简单，这里就不详细介绍了。提供几个优质软件的官方网站：<br>Refuse（Windows，Ubuntu）：<a href="http://rufus.akeo.ie" target="_blank" rel="noopener">http://rufus.akeo.ie</a><br>Etcher（Windows，Linux，macOS）：<a href="https://etcher.io" target="_blank" rel="noopener">https://etcher.io</a></p><h3 id="Linux-macOS平台"><a href="#Linux-macOS平台" class="headerlink" title="Linux,macOS平台"></a>Linux,macOS平台</h3><h4 id="dd命令烧写镜像"><a href="#dd命令烧写镜像" class="headerlink" title="dd命令烧写镜像"></a>dd命令烧写镜像</h4><p>在Linux/macOS中打开Terminal（终端），下面以macOS为例，在Dock中找到启动台-其他-终端。<br>步骤：1,卸载SD卡<br>     2,烧写镜像<br>在终端中输入：</p><pre><code>diskutil list  #列出当前系统挂载的存储设备</code></pre><p><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-3.png" width="70%" height="30%"><br>卸载SD卡的所有分区：</p><pre><code>diskutil unmountDisk diskx   #diskx是系统挂载SD卡的路径</code></pre><p>烧写镜像，任何情况下你都可以将文件直接拖到Terminal中，Terminal将会输出文件的绝对路径 ，例如我将文件放在桌面，将它拖进终端，那么它显示的路径就会是       </p><pre><code>/Users/zip/Desktop/lede-17.01.4-brcm2708-bcm2710-rpi-3-ext4-sdcard.img</code></pre><p>dd命令用法：Ubuntu和macOS中在更改系统设置时要加sudo，回车后需要输入用户密码，这样即使没有超级用户的权限，你也可以执行一些或者全部的权限</p><pre><code>sudo dd if=&lt;...&gt; of=&lt;...&gt; bs=1m</code></pre><p>if（input file）=输入文件、设备的绝对路径；<br>of（output file）=输出文件、设备的绝对路径；<br>bs（block size）=1m 一个操作周期的大小；</p><p>我输入的命令是：</p><pre><code>sudo dd if=/Users/zip/Desktop/lede-17.01.4-brcm2708-bcm2710-rpi-3-ext4-sdcard.img of=/dev/disk4 bs=1m</code></pre><p><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-4.png" width="70%" height="30%"><br>回车输入管理员密码，回车确认就开始烧写，在烧写过程中系统不会有任何提示。<br><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-5.png" width="70%" height="30%"><br>看到上面提示说明烧写完成了。</p><h2 id="使用开源软件Etcher"><a href="#使用开源软件Etcher" class="headerlink" title="使用开源软件Etcher"></a>使用开源软件Etcher</h2><p>如果你觉得上面的命令比较麻烦，这里倒是有一些软件可以帮你一键刷写磁盘镜像，优点就是简洁、安全、美观和快捷，缺点就是效率比较低，而且只能烧写整个磁盘。<br>Etcher官网：<a href="https://etcher.io" target="_blank" rel="noopener">https://etcher.io</a><br>Etcher支持主流PC平台<br><img src="http://ozkg680jm.bkt.clouddn.com/Etcher.png" width="70%" height="30%"><br>左边选择镜像，右边点击就可以烧写镜像了。</p><h2 id="设置树莓派"><a href="#设置树莓派" class="headerlink" title="设置树莓派"></a>设置树莓派</h2><p>由于LEDE默认不开启WiFi，这时候我们可以用网线将树莓派和电脑连接。</p><ul><li>step1<br>确保电脑与树莓派通过网线连接好，打开<code>浏览器</code>在地址栏输入<code>192.168.1.1</code>进入路由器的web管理界面，默认root用户是没有密码的，直接登录，登录后会要求你设置密码，等你设置完密码后，你就可以通过ssh登录树莓派了。</li><li>step2<br>打开WiFi</li><li>step3<br>安装中文语言包</li></ul><h2 id="关于树莓派（Raspberry-pi）"><a href="#关于树莓派（Raspberry-pi）" class="headerlink" title="关于树莓派（Raspberry pi）"></a>关于树莓派（Raspberry pi）</h2><p>Raspberry Pi是一款针对电脑业余爱好者、教师、小学生以及小型企业等用户的迷你电脑，预装Linux系统，体积仅信用卡大小，搭载ARM架构处理器，运算性能和智能手机相仿。<br>在接口方面，Raspberry Pi提供了可供键鼠使用的USB接口，此外还有快速以太网接口、SD卡扩展接口以及1个HDMI高清视频输出接口，可与显示器或者TV相连</p><p>我的是Raspberry 3b。<br><img src="http://ozkg680jm.bkt.clouddn.com/%E6%A0%91%E8%8E%93%E6%B4%BE1.jpg" width="70%" height="30%"><br><img src="http://ozkg680jm.bkt.clouddn.com/%E6%A0%91%E8%8E%93%E6%B4%BE2.jpg" width="70%" height="30%"><br><img src="http://ozkg680jm.bkt.clouddn.com/%E6%A0%91%E8%8E%93%E6%B4%BE3.jpg" width="70%" height="30%"></p><h2 id="关于OpenWrt"><a href="#关于OpenWrt" class="headerlink" title="关于OpenWrt"></a>关于OpenWrt</h2><p>鉴于开源软件在国内的发展态势，目前国内有基于OpenWRT改进而来的OpenWRT-DreamBox。<br>开发Dreambox的lintel之后开发了基于Barrier Breaker的PandoraBox。<br>这个版本的OpenWRT集成了很多常用功能（包括脱机下载等），使用了改进过的较为稳定的硬件驱动，通过这个版本的OpenWRT可以把路由器的功能发挥得淋漓尽致，同时也保证路由器的稳定运行。</p><h2 id="更多系统支持"><a href="#更多系统支持" class="headerlink" title="更多系统支持"></a>更多系统支持</h2><p>树莓派除了可以当路由器来用，还可以当盒子（影音中心）、计算机来用<br>官网也提供了不少系统下载<br>Raspberry pi官网：<a href="https://www.raspberrypi.org" target="_blank" rel="noopener">https://www.raspberrypi.org</a></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 树莓派 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>个性化clover启动项</title>
+      <link href="undefined2018/01/13/%E4%B8%AA%E6%80%A7%E5%8C%96clover%E5%90%AF%E5%8A%A8%E9%A1%B9/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>clover启动时会有一些启动项，有些我们不常用，可以编辑clover的配置文件<code>config.plist</code>（/ESP/EFI/CLOVER/config.plist）来隐藏，可能你想个性化这些启动项的名称和图标，或者默认启动哪个Volumes，期待这篇文章对你有所帮助。<br><a id="more"></a><br>  首先用<code>clover configurator</code>或者diskutil挂载ESP引导分区，同时用这个<code>clover configurator</code>打开/ESP/EFI/CLOVER/config.plist  </p><p><img src="http://ozkg680jm.bkt.clouddn.com/%E4%B8%AA%E6%80%A7%E5%8C%96clover%E5%90%AF%E5%8A%A8%E9%A1%B9-clover%20configurator.png" width="70%" height="30%"></p><p>打开就行了，在工具的左边，找到<code>boot</code>选项卡，其中<code>Default boot volume</code>是默认启动分区，你可以填写分区的名称或者其他的类似<code>LastBootedVolume</code>（这些在clover的帮助文档中找到）<br>勾选<code>NoearlyProgress</code>可以关机clover的欢迎界面  </p><p><img src="http://ozkg680jm.bkt.clouddn.com/%E4%B8%AA%E6%80%A7%E5%8C%96clover%E5%90%AF%E5%8A%A8%E9%A1%B9-boot%20volume.png" width="70%" height="30%"></p><p>在左边的<code>GUI</code>选项卡中，<code>Hide Volume</code>中填写你想隐藏的启动项；<br><img src="http://ozkg680jm.bkt.clouddn.com/%E4%B8%AA%E6%80%A7%E5%8C%96clover%E5%90%AF%E5%8A%A8%E9%A1%B9-hide%20volume.png" width="70%" height="30%"><br>在<code>Custom Entries</code>中添加：<br><img src="http://ozkg680jm.bkt.clouddn.com/%E4%B8%AA%E6%80%A7%E5%8C%96clover%E5%90%AF%E5%8A%A8%E9%A1%B9-macOS.png" width="70%" height="30%"><br>其中macOs中只要在<code>Volume</code>中选择macOS安装分区，类型选择OS X就行，而Windows和Ubuntu则不同，<code>Volume</code>中选择Esp分区，<code>Path</code>中填写启动项的绝对路径，类型选择对应的Windows和Ubuntu。<br><img src="http://ozkg680jm.bkt.clouddn.com/%E4%B8%AA%E6%80%A7%E5%8C%96clover%E5%90%AF%E5%8A%A8%E9%A1%B9-ubuntu.png" width="70%" height="30%"><br><img src="http://ozkg680jm.bkt.clouddn.com/%E4%B8%AA%E6%80%A7%E5%8C%96clover%E5%90%AF%E5%8A%A8%E9%A1%B9-windows.png" width="70%" height="30%">    </p><p>勾选<code>Title</code>，填写的名称就是你想个性化的启动项的名称，<code>Image</code>中填写图标的绝对路径，如果不想个性化启动项图标可以不用管它，个性化教程大概就是这样，如果有疑问可以联系我。</p>]]></content>
+      
+      <categories>
+          
+          <category> clover </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> clover </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>开启hidpi</title>
+      <link href="undefined2018/01/01/%E5%BC%80%E5%90%AFhidpi/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>当你顺利安装好黑果之后是否感觉系统字体太小，而当你更改更低的分辨率是又无法忍受字体发虚、界面模糊。开启hidpi能够让你在使用低分辨率的同时能够享受高清。<br><a id="more"></a></p><h2 id="获取两个重要参数"><a href="#获取两个重要参数" class="headerlink" title="获取两个重要参数"></a>获取两个重要参数</h2><h3 id="获取DisplayVendorID和DisplayProductID"><a href="#获取DisplayVendorID和DisplayProductID" class="headerlink" title="获取DisplayVendorID和DisplayProductID"></a>获取DisplayVendorID和DisplayProductID</h3><p>在Terminal中键入这两条命令：   </p><pre><code>ioreg -l|grep &quot;DisplayVendorID&quot;ioreg -l|grep &quot;DisplayProductID&quot;</code></pre><p><img src="http://ozkg680jm.bkt.clouddn.com/%E5%BC%80%E5%90%AFHidpi-2.png" width="70%" height="30%"></p><p>此时屏幕上会输出两个十进制数，如图，我得到的两个十进制数分别是：<code>2533</code>和<code>1719</code><br>接下来就是将这两个十进制数转化为十六进制数，我们可以使用计算器来转化，打开<code>启动台</code>-<code>计算器</code><br>点击<code>显示</code>-<code>编程型</code><br><img src="http://ozkg680jm.bkt.clouddn.com/%E5%BC%80%E5%90%AFHidpi-1.png" width="70%" height="30%"><br>分别刚才获取的两个<code>ID</code>输入,然后点击16，就转化为十六进制了。  </p><p><img src="http://ozkg680jm.bkt.clouddn.com/%E5%BC%80%E5%90%AFHidpi-3.png" width="70%" height="30%"><br><img src="http://ozkg680jm.bkt.clouddn.com/%E5%BC%80%E5%90%AFHidpi-4.png" width="70%" height="30%"><br>记住这两个16进制数。接下来需要用到。</p><h2 id="生成配置显示器文件"><a href="#生成配置显示器文件" class="headerlink" title="生成配置显示器文件"></a>生成配置显示器文件</h2><p>在<code>Terminal</code>中键入以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Desktop</span><br><span class="line">mkdir DisplayVendorID-xxxx    //其中“xxxx”是DisplayVendorID的16进制值小写</span><br><span class="line"><span class="built_in">cd</span> DisplayVendorID-xxxx        //进入DisplayVendorID-xxxx目录</span><br><span class="line">touch DisplayProductID-xxxx     //其中“xxxx”是DisplayProductID的16进制值小写</span><br><span class="line">open .                          //Finder中打开</span><br></pre></td></tr></table></figure></p><h3 id="添加分辨率"><a href="#添加分辨率" class="headerlink" title="添加分辨率"></a>添加分辨率</h3><h3 id="打开hidpi"><a href="#打开hidpi" class="headerlink" title="打开hidpi"></a>打开hidpi</h3><p>在<code>Terminal</code>中键入以下命令开启Hidpi<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool <span class="literal">true</span></span><br></pre></td></tr></table></figure></p><h2 id="使用RDM切换"><a href="#使用RDM切换" class="headerlink" title="使用RDM切换"></a>使用RDM切换</h2>]]></content>
+      
+      
+        <tags>
+            
+            <tag> hidpi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>声卡AlC255</title>
+      <link href="undefined2017/12/10/%E5%A3%B0%E5%8D%A1AlC255/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>之前发了小米笔记本air的黑苹果安装教程的帖子，黑苹果总算是安装上去了，可是还有许多问题没有解决,不过无线网卡和蓝牙就不要想了，但是还是要解决上网和声音的问题，声卡驱动不了视频都播放不了，QQ接收一个消息屏幕都会闪一下，总之，体验不大好，经过2个多月的接触，学习，以及在大佬（黑果小兵）的帮助下终于解决了大部分目前一可以解决的问题：<br><a id="more"></a>  </p><ul><li>声卡仿冒：首先感谢大佬的耐心帮助，@黑果小兵 ，仿冒了声卡，编译了声卡驱动。要知道这活可不是一般人能仿冒的，声卡仿冒了，终于不用忍受万能声卡驱动带来的种种不足，例如不能自动切换耳机、耳机有电流声以及声音太小。声卡alc255仿冒成功，注入ID等于27时效果最好，声卡驱动好了以后，是真的好用啊！<br><img src="http://ozkg680jm.bkt.clouddn.com/%E8%BE%93%E5%85%A5.png" width="70%" height="30%"><br><img src="http://ozkg680jm.bkt.clouddn.com/%E8%BE%93%E5%85%A5.png" width="70%" height="30%"></li></ul><ul><li>亮度调节：群友的帮助和自己爬贴终于解决了亮度调节，可以插上外置鼠标或者键盘在偏好设置-键盘-快捷键-显示器里面设置快捷键，或者直接在偏好设置-显示器里面调节滑块改变亮度，感觉会省电一些吧，反正看起来舒服多了。<br><img src="http://ozkg680jm.bkt.clouddn.com/%E4%BA%AE%E5%BA%A6.png" width="70%" height="30%"></li></ul><p>解决了8个苹果和四叶草启动跑代码，并且隐藏了部分不必要的启动项。<br>核心显卡目前完美驱动，有线网卡内建好了，<br><img src="http://ozkg680jm.bkt.clouddn.com/%E7%B3%BB%E7%BB%9F.png" width="70%" height="30%"></p><p>好了感觉自己废话好多，别人都是开篇几张图后面全靠编，笔者我也忍不住放几张图出来<br><img src="http://ozkg680jm.bkt.clouddn.com/%E9%9F%B3%E9%A2%91.png" width="70%" height="30%"> </p><p>福利来了，最新修改的efi文件<br>下载<br><a href="https://pan.baidu.com/s/1i5L7dS5" target="_blank" rel="noopener">https://pan.baidu.com/s/1i5L7dS5</a></p><p>efi文件怎么替换就不用我多说了吧，尽管我之前也替换出错导致windows启动不了，也正是因为这个学到了不少东西。<br>最后附上大佬的博客：<br>  blog.daliansky.net<br>如果言论不当以及技术问题还请大佬指导</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> alc255 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>ESP分区</title>
+      <link href="undefined2017/10/15/ESP%E5%88%86%E5%8C%BA/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>不少安装黑果的小白应该都遇到一个问题，在抹除磁盘时系统提示空间不足，这时候不少有经验的人会告诉你ESP分区的大小要大于200m，然而ESP分区到底是做什么用的呢？<br><a id="more"></a></p><h2 id="挂载并修改ESP分区"><a href="#挂载并修改ESP分区" class="headerlink" title="挂载并修改ESP分区"></a>挂载并修改ESP分区</h2><p>##挂载系统ESP分区</p><p>###写在前面：<br>众所周知，在绝大部分个人PC中预装的都是Windows系列的操作系统，苹果公司的个人电脑预装的是Mac OS，无论是哪种操作系统都有都有它们的系统分区，其中系统分区中包含保证系统正常运转的必要系统文件，因此一般情况下用户在系统分区中只拥有可读的权限，其实这样是为了防止用户误删文件导致系统崩溃，正常情况下我们没有必要动这些文件，那么什么是ESP分区，ESP分区究竟在开机到正常进入系统用户界面起着什么作用呢？  </p><p>###常见的系统启动方式：<br>以win7为分界线，在win7之前的绝大部分PC都是以传统引导，win7以后一般是uefi引导，究竟支持哪些引导，是由主板决定的，以下是根据uefi引导操作。</p><p>###windows系统下使用命令行挂载<br>首先使用Windows命令挂载ESP分区<br>Windows徽键＋r，在运行框里输入cmd，点击运行即可<br>在命令行中输入以下命令：    </p><pre><code>list disk  //列出当前设备挂载磁盘  select disk 0  //选中磁盘0，注意这里的磁盘是安装系统所在的硬盘  list partition //列出选中磁盘0下的分区  select partition n //n表示esp分区的数字代号  assign letter＝z  //为esp分区分配盘符标识z，这个字母可以根据自己的喜好  exit  //退出命令行  </code></pre><p>此时打开Windows的资源管理器，在我的电脑下面你就可以看见出现了一个z盘，就是我们的系统引导分区，此时你发现你无法用<br>Windows的资源管理器打开esp分区，因为这个分区是受系统保护的，接下来我们就要使用这个软件了explore++；<br>右键explore++，选择以管理员身份运行，这时候将优盘efi文件夹覆盖到系统的esp分区，并且跳过重复文件，接下来利用软件bootice给我们的四叶草添加启动引导，打开bootice，选择uefi，点击修改启动序列，在系统的esp分区中的clover的文件夹下面的CLOVERX64.efi（\EFI\CLOVER\CLOVERX64.efi），并将这个启动项上移到第一启动项，保存好之后，重新开机你就可以看见四叶草的启动界面了。<br><img src="http://img04.sogoucdn.com/app/a/100520146/2c6edb8f7ab62a46b5aa07e62ad14aaa" width="70%" height="30%">  </p>]]></content>
+      
+      <categories>
+          
+          <category> PC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hackintosh </tag>
+            
+            <tag> 引导 </tag>
+            
+            <tag> 系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Hackintosh（2）</title>
+      <link href="undefined2017/10/12/Hackintosh%EF%BC%882%EF%BC%89/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="黑苹果安装教程之开始安装"><a href="#黑苹果安装教程之开始安装" class="headerlink" title="黑苹果安装教程之开始安装"></a>黑苹果安装教程之开始安装</h2><h2 id="已经制作好的安装优盘"><a href="#已经制作好的安装优盘" class="headerlink" title="已经制作好的安装优盘"></a>已经制作好的安装优盘</h2><p>如果你按照之前的教程成功制作了黑苹果原版系统安装优盘，那么你会发现你进入Mac安装界面无法格式化Mac安装分区，如果没有制作好安装优盘，那么分区和调整系统esp引导分区依旧是很有必要的，这不仅有利于我们安装Mac，同时也为我们启动多系统提供了便利，相信有不少读者都安装了我们喜爱的Linux的发行版Ubuntu.<br><a id="more"></a></p><h2 id="Mac系统安装分区"><a href="#Mac系统安装分区" class="headerlink" title="Mac系统安装分区"></a>Mac系统安装分区</h2><p>关闭安全启动可以看看大佬的帖子<br>首先，我们要给mac系统分出一个安装盘，进入Windows10系统，打开文件管理，右键我的电脑，打开管理；<br><img src="http://img02.sogoucdn.com/app/a/100520146/95ff9fd401e906499548f90e6ca041c7" width="70%" height="30%"><br>单击磁盘工具，右键c盘，</p><p>选择压缩卷，我输入压缩空间量60G，你们可以自行调整;<br><img src="http://img04.sogoucdn.com/app/a/100520146/1c39d2f400c227cc9c14d2255873a6e6" width="70%" height="30%"><br>之后打开工具Paragon Hard Disk Manage，将压缩出来的分区格式转化为Apple HFS。软件下载地址：<br><a href="https://pan.baidu.com/s/1geYjoDd" title="下载地址" target="_blank" rel="noopener">https://pan.baidu.com/s/1geYjoDd](https://pan.baidu.com/s/1geYjoDd](https://pan.baidu.com/s/1geYjoDd</a><br><img src="http://img03.sogoucdn.com/app/a/100520146/b7b4fc939461deac70620c82deaeb8f6" width="70%" height="30%"><br><img src="http://img01.sogoucdn.com/app/a/100520146/e9f3b83f5f5c11b4a8cfdca0822a6408" width="70%" height="30%"><br>这样mac安装盘就分好了，接下来进入苹果安装界面，选择磁盘工具，将我们分好的苹果分区抹掉，格式我是选择APFS或者HFS，如果抹除不成功，一般是笔记本的esp分区太小了，应该要300m以上，如何扩大esp分区，可以看看论坛大佬的贴子，安装教程就到这里，不要忘了把系统的esp分区下的文件夹替换成我的efi文件夹里的，这样的话就不用每次进mac系统前借助优盘的四叶草引导跑代码了，如果不会替换，建议多爬爬贴，论坛里有教程￼￼￼，当然这只是安装好了，只是完成了三分之一，后续更新驱动安装和四叶草界面美化 </p><p>小米笔记本驱动下载：<br><a href="https://pan.baidu.com/s/1skAjk8d" target="_blank" rel="noopener">https://pan.baidu.com/s/1skAjk8d</a><br>这些驱动按照需要安装，安装调节分辨率的软件后在上面状态栏选择调节分辨率，亮度调节也是这样。<br><img src="http://img01.sogoucdn.com/app/a/100520146/4473dadc91a6c4aa4fb70e452f6203e9" width="70%" height="30%"></p><p>建议先搞一个pe，以防不测，其次如果要将，efi替换需要使用软件easyuefi为四叶草引导添加启动项，并把四叶草引导调为首选启动项，或者合拼efi分区</p><p>可以看看这些大佬的帖子：<br><a href="http://www.miui.com/thread-7419826-1-1.html" target="_blank" rel="noopener">http://www.miui.com/thread-7419826-1-1.html</a><br><a href="http://www.miui.com/thread-7601066-1-1.html" target="_blank" rel="noopener">http://www.miui.com/thread-7601066-1-1.html</a><br><a href="http://www.miui.com/thread-7574042-1-1.html" target="_blank" rel="noopener">http://www.miui.com/thread-7574042-1-1.html</a><br>女帝镇楼：  </p><p><img src="http://img01.sogoucdn.com/app/a/100520146/d813b2df31168428eca4bb9d33be0066" wedth="70%" height="30%">  </p>]]></content>
+      
+      <categories>
+          
+          <category> PC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hackintosh </tag>
+            
+            <tag> 系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Hackintosh（1）</title>
+      <link href="undefined2017/10/10/Hackintosh%EF%BC%881%EF%BC%89/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>这笔记本还是可以的，目前论坛上还没有适配这款新出的笔记本的黑苹果安装教程，不过在我的不懈折腾下总算让我的小米笔记本吃上了黑苹果</p><ul><li><p>需要的工具包括：<strong><em>1</em></strong>.写盘工具  <strong><em>2</em></strong>.原版镜像</p></li><li><p>小米笔记本AIR i7 指纹版安装黑苹果10.13  </p><a id="more"></a>   </li></ul><h2 id="黑苹果安装教程之准备工作"><a href="#黑苹果安装教程之准备工作" class="headerlink" title="黑苹果安装教程之准备工作"></a>黑苹果安装教程之准备工作</h2><p>这款小米笔记本我是816买的，距离今天已经过去差不多两个月了，总体上这笔记本还是可以的，目前论坛上还没有适配这款新出的笔记本的黑苹果安装教程，不过在我的不懈折腾下总算让我的小米笔记本吃上了黑苹果，首先，我是小白，安装成功离不开miui论坛和黑苹果乐园大佬们的无偿帮助，为了让更多小白吃上黑苹果，特写下这篇教程，如有不足还请大佬指教，废话不多说首先放图。<br><img src="http://img02.sogoucdn.com/app/a/100520146/f3bcad69bb4f08ed11046ba2254679ea" width="70%" height="30%"><br><img src="http://img03.sogoucdn.com/app/a/100520146/3e7833c5ec09e961532ca2a6a8c7e811" width="70%" height="30%"><br><img src="http://img01.sogoucdn.com/app/a/100520146/f2134420c609a29d57d041c81fa6a311" width="70%" height="30%">  </p><p>首先是准备工作，下载必须的黑苹果安装镜像，下面是百度云盘的下载地址：<a href="http://pan.baidu.com/s/1kVwxCPL" target="_blank" rel="noopener">http://pan.baidu.com/s/1kVwxCPL</a><br>这个镜像是自带四叶草引导的，下面这个工具是将镜像写入优盘的工具，下载地址是：<br><a href="http://pan.baidu.com/s/1crWkLw" target="_blank" rel="noopener">http://pan.baidu.com/s/1crWkLw</a></p><p>写在前面，安装黑苹果并不完美：<br><strong><em>1</em></strong>.内置intel无线网卡不可用，据说intel无线网卡无解，当然还是希望可以驱动的，不过你也可以用小米随身Wifi或者其他USB无线网卡，前提是要有mac驱动<br><strong><em>2</em></strong>.内置蓝牙不可用<br><strong><em>3</em></strong>.1080p字太小，论坛有开高清显示的教程，我是设置1280x720的，同时开启高清显示，感觉还不错。<br><img src="http://img03.sogoucdn.com/app/a/100520146/9f90200d61c59b5540d8ea6c228f2be9" width="70%" height="30%"><br>打开工具transmac，右键以管理员权限运行<br><img src="http://img01.sogoucdn.com/app/a/100520146/231bd7c6d86a7c92691181ee5dc7a969" width="70%" height="30%"><br>，如果Windows提示格式化优盘，直接忽略，完成后，右键优盘，选择restret for disk imge,镜像写入完成后，你可以重启笔记本，按F12选择优盘启动，可能要关闭安全启动，按住F2进入BIOS，需要设置一个密码才能关闭安全启动，如果可以选择优盘启动可以直接忽略此步骤，在四叶草引导界面选择Mac，接下来会跑代码，你只需要耐心等待，不一会就回进入安装界面，这时不要安装因为你还没有为苹果系统分出一个安装盘。<br><img src="http://ozkg680jm.bkt.clouddn.com/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E6%88%AA%E5%9B%BE%E6%A1%8C%E9%9D%A2.png" width="70%" height="30%"><br>准备工作就到这里，本帖持续更新</p><p>女帝镇楼：</p><p><img src="http://img04.sogoucdn.com/app/a/100520146/274e3a4ea2f54bb303360499a92dd737" wedth="30%" height="20%"></p><p>标签： hackintosh  </p>]]></content>
+      
+      <categories>
+          
+          <category> PC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hackintosh </tag>
+            
+            <tag> 系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Excel进阶教程</title>
+      <link href="undefined2017/09/10/Excel%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>同一文件下如何合并相同类型的表格，相信大家对这个问题困惑了很久，如何如何合并这些表格呢？合并之后是否会得到我们想要的表格呢？<br>通常情况下我们如果要使用Excel来合并同一类型的表格，我们一般将每个表格文件打开剪切我们需要的单元格，并一一粘贴到目标表格中，你会发现其中有很多重复的步骤，特别是当表格文件数量相当多的时候，这工作量就很大了，既然重复相同的步骤是麻烦的根源，那么我们为何不把这项工作交给计算机做呢？其实微软公司出品的办公软件Excel中就有这个功能，不过要实现这个功能，我们就要用到“宏”这个东西，简单的说“宏”就是帮你完成重复的操作，如何打开，使用宏呢？<br><a id="more"></a>  </p><p><img src="http://ozkg680jm.bkt.clouddn.com/%E5%AE%8F%E6%9F%A5%E7%9C%8B%E4%BB%A3%E7%A0%81.png" width="70%" height="30%"></p><pre><code>Sub 合并当前目录下所有工作簿的全部工作表()  Dim MyPath, MyName, AWbName  Dim Wb As Workbook, WbN As String  Dim G As LongDim Num As Long  Dim BOX As String  Application.ScreenUpdating = FalseMyPath = ActiveWorkbook.PathMyName = Dir(MyPath &amp; &quot;\&quot; &amp; &quot;*.xls&quot;)AWbName = ActiveWorkbook.NameNum = 0Do While MyName &lt;&gt; &quot;&quot;If MyName &lt;&gt; AWbName ThenSet Wb = Workbooks.Open(MyPath &amp; &quot;\&quot; &amp; MyName)Num = Num + 1With Workbooks(1).ActiveSheet.Cells(.Range(&quot;B65536&quot;).End(xlUp).Row + 2, 1) = Left(MyName, Len(MyName) - 4)For G = 1 To Sheets.CountWb.Sheets(G).UsedRange.Copy .Cells(.Range(&quot;B65536&quot;).End(xlUp).Row + 1, 1)NextWbN = WbN &amp; Chr(13) &amp; Wb.NameWb.Close FalseEnd WithEnd IfMyName = DirLoopRange(&quot;B1&quot;).SelectApplication.ScreenUpdating = TrueMsgBox &quot;共合并了&quot; &amp; Num &amp; &quot;个工作薄下的全部工作表。如下：&quot; &amp; Chr(13) &amp; WbN, vbInformation, &quot;提示&quot;End Sub  </code></pre><p>首先复制代码，然后在文件夹中新建一个表格文件，然后使用Excel打开!<br><img src="http://ozkg680jm.bkt.clouddn.com/%E7%B2%98%E8%B4%B4%E4%BB%A3%E7%A0%81.png" width="70%" height="30%"><br>关闭窗口，点击运行&gt;宏   </p><p><img src="http://ozkg680jm.bkt.clouddn.com/%E8%BF%90%E8%A1%8C.png" width="70%" height="30%"><br>一会儿就合并好了，但是这个表格并不符合我们的要求，这时善用排序功能，就行了。<br><img src="http://ozkg680jm.bkt.clouddn.com/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5.jpg" width="70%" height="30%">      </p>]]></content>
+      
+      <categories>
+          
+          <category> APP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> office </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>读《红楼梦》有感</title>
+      <link href="undefined2017/08/17/%E8%AF%BB%E3%80%8A%E7%BA%A2%E6%A5%BC%E6%A2%A6%E3%80%8B%E6%9C%89%E6%84%9F/"/>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>红楼梦是中国古典小说，作者曹雪芹和高鹗，以贾宝玉和林黛玉的爱情故事以及封建四大家族贾、史、王、薛的兴衰为主线，初读红楼梦，有些难度，先不说情节如何，单是复杂的人物关系以及宏大的场景就会让你眼花缭乱，因此先不说读懂红楼梦，要想耐心的读完这部小说，你就必须掌握两张地图，首先是人物关系图，其次是贾府地图。<br><a id="more"></a></p><p>作为中国古代四大名著之首，红楼梦具有很高的文学底蕴，是中国古代小艺术的巅峰。作者在小说中利用谐音来暗示人物的结局。即“真事隐去，假语村言”的特殊笔法。作者在刻画人物形象是着重描写人物的心理人物的衣着外貌，服饰的描写反映了当时的社会背景，使得这部小说不但具有很高的文学价值，还具有考古价值。小说本身与作者的人生经历有些相似，作者曹雪芹出生于官宦世家，早年过着不愁吃穿的生活，后来曹家因亏空获罪被满门抄斩，曹雪芹移居北京，靠朋友救济和卖字画度日，正是这段经历使他具备了写《红楼梦》的文化基础和思想觉悟。小说中的贾宝玉本是一块补天的石头，被一个僧人和一个道士带到人间，开始了充满曲折的人生经历，读完这部小说可能你对林黛玉的结局心生怜悯，作者正是想通过这种悲惨的结局来表达对封建势力的批判，结合作者的人生经历很容易想到作者这样写的目的。</p><p>接下来是小说的主要内容，有人说《红楼梦》就是一个男人和一群女人的故事，其实也不尽然，《红楼梦》开篇介绍的背景就暗含人物结局，这里就不浪费过多笔墨，这些自有研究红学的人解决，我认为小说大致可以分为三个部分，毕竟我对贾宝玉和这群地位不同的少女的平静的大观园生活不感冒，我比较喜欢有起伏的情节，到了最后四大家族由盛转衰，物是人非，正如作者自我评价：“满纸荒唐言，一把辛酸泪！都云作者痴，谁解其中味”。其实就是写了一段爱情故事，一千个读者眼中有一千个哈姆雷特。开国领袖毛主席评价小说《红楼梦》：（中国过去）除了地大物博，人口众多，历史悠久，以及在文学上有部《红楼梦》等等以外，很多地方不如人家，骄傲不起来。《红楼梦》不仅要当做小说看，而且要当做历史看。他写的是很细致的、很精细的社会历史”，文学家鲁迅则表示：“《红楼梦》是中国许多人所知道，至少，是知道这名目的书。谁是作者和续者姑且勿论，单是命意，就因读者的眼光而有种种：经学家看见《易》，道学家看见淫，才子看见缠绵，革命家看见排满，流言家看见宫闱秘事”，《人间词话》作者王国维认为：“《红楼梦》，哲学的也，宇宙的也，文学的也。此《红楼梦》之所以大背于吾国人之精神，而其价值亦即存乎此”。大家们对《红楼梦》有极高评价。</p><p>当你厌倦了色彩纷繁的荧屏，想感受那一缕墨香陪伴，不妨捧起《红楼梦》细细品读。</p><iframe type="music" frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=439915614&auto=1&height=66"></iframe>  ]]></content>
+      
+      <categories>
+          
+          <category> 文学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 读后感 </tag>
+            
+            <tag> 文学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+</search>
