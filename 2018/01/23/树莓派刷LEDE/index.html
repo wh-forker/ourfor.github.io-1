@@ -250,8 +250,8 @@
 <pre><code>sudo dd if=&lt;...&gt; of=&lt;...&gt; bs=1m
 </code></pre><p>if（input file）=输入文件、设备的绝对路径；<br>of（output file）=输出文件、设备的绝对路径；<br>bs（block size）=1m 一个操作周期的大小；</p>
 <p>我输入的命令是：</p>
-<pre><code>sudo dd if=/Users/zip/Desktop/lede-17.01.4-brcm2708-bcm2710-rpi-3-ext4-sdcard.img of=/dev/disk4 bs=1m
-</code></pre><p><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-4.png" width="70%" height="30%"><br>回车输入管理员密码，回车确认就开始烧写，在烧写过程中系统不会有任何提示。<br><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-5.png" width="70%" height="30%"><br>看到上面提示说明烧写完成了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd <span class="keyword">if</span>=/Users/zip/Desktop/lede-17.01.4-brcm2708-bcm2710-rpi-3-ext4-sdcard.img of=/dev/disk4 bs=1m</span><br></pre></td></tr></table></figure>
+<p><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-4.png" width="70%" height="30%"><br>回车输入管理员密码，回车确认就开始烧写，在烧写过程中系统不会有任何提示。<br><img src="http://ozkg680jm.bkt.clouddn.com/Raspberry%20pi%203b%E5%88%B7LEDE-5.png" width="70%" height="30%"><br>看到上面提示说明烧写完成了。</p>
 <h2 id="使用开源软件Etcher"><a href="#使用开源软件Etcher" class="headerlink" title="使用开源软件Etcher"></a>使用开源软件Etcher</h2><p>如果你觉得上面的命令比较麻烦，这里倒是有一些软件可以帮你一键刷写磁盘镜像，优点就是简洁、安全、美观和快捷，缺点就是效率比较低，而且只能烧写整个磁盘。<br>Etcher官网：<a href="https://etcher.io" target="_blank" rel="noopener">https://etcher.io</a><br>Etcher支持主流PC平台<br><img src="http://ozkg680jm.bkt.clouddn.com/Etcher.png" width="70%" height="30%"><br>左边选择镜像，右边点击就可以烧写镜像了。</p>
 <h2 id="设置树莓派"><a href="#设置树莓派" class="headerlink" title="设置树莓派"></a>设置树莓派</h2><p>由于LEDE默认不开启WiFi，这时候我们可以用网线将树莓派和电脑连接。</p>
 <ul>
@@ -270,7 +270,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-02-07T08:54:34.525Z" itemprop="dateUpdated">2018-02-07 16:54:34</time>
+    Last updated: <time datetime="2018-02-23T12:12:22.896Z" itemprop="dateUpdated">2018-02-23 20:12:22</time>
 </span><br>
 
 
