@@ -231,6 +231,7 @@
             
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
+            
             <script src="/assets/js/APlayer.min.js"> </script><p>最近很多免费的vpn软件都失效了，之前有用过蓝灯、FreeVPN之类的科学上网的软件，这类软件虽然免费，但是安全性较低、连接速度比较慢。油管视频基本看不了，有时还连接失败。好在最近亚马逊云（AWS）、谷歌云（Google Cloud）等虚拟主机厂商都推出了免费VPS的活动，如果你有信用卡你可以去AWS和Google Cloud上面去看看，AWS提供一年的免费云主机，Google Clou赠送的金额足够你的VPS跑半年，然而由于信用卡的缘故，这两个我都没用，想想也不现实天底下哪有这么大免费午餐，不然别人还不得亏死，还是老老实实买个VPS吧，推荐搬瓦工和Vultr他家的VPS，这两家现在都支持支付宝付款，并且都比较便宜。<br><a id="more"></a>  </p>
 <h2 id="选购云主机（VPS）"><a href="#选购云主机（VPS）" class="headerlink" title="选购云主机（VPS）"></a>选购云主机（VPS）</h2><ul>
 <li><a href="https://bandwagonhost.com/" target="_blank" rel="noopener">搬瓦工</a></li>
@@ -289,7 +290,7 @@
 <li>Linux和macOS下直接在终端连接，用法：<code>ssh root@ip_address</code>其中<code>root</code>是用户名，一般是<code>root</code>,端口不更改就是<code>22</code>,<code>ip_address</code>是主机的<code>外网ip</code></li>
 </ul>
 <p>首先，更改<code>root</code>密码，ssh连接主机后输入以下命令：  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo passwd root</span></pre></td></tr></table></figure>
 <p>改好密码后下载<code>doub.io</code>的一键安装脚本，键入以下指令即可，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
 <p>它会下载<code>ssr.sh</code>这个一键安装脚本，按照提示输入即可，之后如果你想查看用户信息，直接输入<code>bash ssr.sh</code>如果提示没有权限<code>chmod +x ssr.sh</code>加上运行权限就行了，你填写好参数后会在屏幕上面打印出<code>ss</code>和<code>ssr</code>链接地址。  </p>
