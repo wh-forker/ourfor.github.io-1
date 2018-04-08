@@ -233,39 +233,8 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             
             <script src="/assets/js/APlayer.min.js"> </script><p>同一文件下如何合并相同类型的表格，相信大家对这个问题困惑了很久，如何如何合并这些表格呢？合并之后是否会得到我们想要的表格呢？<br>通常情况下我们如果要使用Excel来合并同一类型的表格，我们一般将每个表格文件打开剪切我们需要的单元格，并一一粘贴到目标表格中，你会发现其中有很多重复的步骤，特别是当表格文件数量相当多的时候，这工作量就很大了，既然重复相同的步骤是麻烦的根源，那么我们为何不把这项工作交给计算机做呢？其实微软公司出品的办公软件Excel中就有这个功能，不过要实现这个功能，我们就要用到“宏”这个东西，简单的说“宏”就是帮你完成重复的操作，如何打开，使用宏呢？<br><a id="more"></a>  </p>
-<p><img src="http://ozkg680jm.bkt.clouddn.com/%E5%AE%8F%E6%9F%A5%E7%9C%8B%E4%BB%A3%E7%A0%81.png" width="70%" height="30%"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">复制下面代码：</span><br></pre></td></tr></table></figure></p>
-<pre><code class="bash">Sub 合并当前目录下所有工作簿的全部工作表()  
-Dim MyPath, MyName, AWbName  
-Dim Wb As Workbook, WbN As String  
-Dim G As Long
-Dim Num As Long  
-Dim BOX As String  
-Application.ScreenUpdating = False
-MyPath = ActiveWorkbook.Path
-MyName = Dir(MyPath &amp; <span class="string">"\" &amp; "</span>*.xls<span class="string">")</span>
-<span class="string">AWbName = ActiveWorkbook.Name</span>
-<span class="string">Num = 0</span>
-<span class="string">Do While MyName &lt;&gt; "</span><span class="string">"</span>
-<span class="string">If MyName &lt;&gt; AWbName Then</span>
-<span class="string">Set Wb = Workbooks.Open(MyPath &amp; "</span>\<span class="string">" &amp; MyName)</span>
-<span class="string">Num = Num + 1</span>
-<span class="string">With Workbooks(1).ActiveSheet</span>
-<span class="string">.Cells(.Range("</span>B65536<span class="string">").End(xlUp).Row + 2, 1) = Left(MyName, Len(MyName) - 4)</span>
-<span class="string">For G = 1 To Sheets.Count</span>
-<span class="string">Wb.Sheets(G).UsedRange.Copy .Cells(.Range("</span>B65536<span class="string">").End(xlUp).Row + 1, 1)</span>
-<span class="string">Next</span>
-<span class="string">WbN = WbN &amp; Chr(13) &amp; Wb.Name</span>
-<span class="string">Wb.Close False</span>
-<span class="string">End With</span>
-<span class="string">End If</span>
-<span class="string">MyName = Dir</span>
-<span class="string">Loop</span>
-<span class="string">Range("</span>B1<span class="string">").Select</span>
-<span class="string">Application.ScreenUpdating = True</span>
-<span class="string">MsgBox "</span>共合并了<span class="string">" &amp; Num &amp; "</span>个工作薄下的全部工作表。如下：<span class="string">" &amp; Chr(13) &amp; WbN, vbInformation, "</span>提示<span class="string">"</span>
-<span class="string">End Sub </span>
-</code></pre>
-<p>首先复制代码，然后在文件夹中新建一个表格文件，然后使用Excel打开!<br><img src="http://ozkg680jm.bkt.clouddn.com/%E7%B2%98%E8%B4%B4%E4%BB%A3%E7%A0%81.png" width="70%" height="30%"><br>关闭窗口，点击运行&gt;宏   </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Sub 合并当前目录下所有工作簿的全部工作表()  </span><br><span class="line">Dim MyPath, MyName, AWbName  </span><br><span class="line">Dim Wb As Workbook, WbN As String  </span><br><span class="line">Dim G As Long</span><br><span class="line">Dim Num As Long  </span><br><span class="line">Dim BOX As String  </span><br><span class="line">Application.ScreenUpdating = False</span><br><span class="line">MyPath = ActiveWorkbook.Path</span><br><span class="line">MyName = Dir(MyPath &amp; <span class="string">"\" &amp; "</span>*.xls<span class="string">")</span></span><br><span class="line"><span class="string">AWbName = ActiveWorkbook.Name</span></span><br><span class="line"><span class="string">Num = 0</span></span><br><span class="line"><span class="string">Do While MyName &lt;&gt; "</span><span class="string">"</span></span><br><span class="line"><span class="string">If MyName &lt;&gt; AWbName Then</span></span><br><span class="line"><span class="string">Set Wb = Workbooks.Open(MyPath &amp; "</span>\<span class="string">" &amp; MyName)</span></span><br><span class="line"><span class="string">Num = Num + 1</span></span><br><span class="line"><span class="string">With Workbooks(1).ActiveSheet</span></span><br><span class="line"><span class="string">.Cells(.Range("</span>B65536<span class="string">").End(xlUp).Row + 2, 1) = Left(MyName, Len(MyName) - 4)</span></span><br><span class="line"><span class="string">For G = 1 To Sheets.Count</span></span><br><span class="line"><span class="string">Wb.Sheets(G).UsedRange.Copy .Cells(.Range("</span>B65536<span class="string">").End(xlUp).Row + 1, 1)</span></span><br><span class="line"><span class="string">Next</span></span><br><span class="line"><span class="string">WbN = WbN &amp; Chr(13) &amp; Wb.Name</span></span><br><span class="line"><span class="string">Wb.Close False</span></span><br><span class="line"><span class="string">End With</span></span><br><span class="line"><span class="string">End If</span></span><br><span class="line"><span class="string">MyName = Dir</span></span><br><span class="line"><span class="string">Loop</span></span><br><span class="line"><span class="string">Range("</span>B1<span class="string">").Select</span></span><br><span class="line"><span class="string">Application.ScreenUpdating = True</span></span><br><span class="line"><span class="string">MsgBox "</span>共合并了<span class="string">" &amp; Num &amp; "</span>个工作薄下的全部工作表。如下：<span class="string">" &amp; Chr(13) &amp; WbN, vbInformation, "</span>提示<span class="string">"</span></span><br><span class="line"><span class="string">End Sub</span></span><br></pre></td></tr></table></figure>
+<p>首先复制代码，然后在文件夹中新建一个表格文件，然后使用Excel打开，在选项卡中找到宏并打开，选择工作的表格，查看代码<br><img src="http://ozkg680jm.bkt.clouddn.com/%E5%AE%8F%E6%9F%A5%E7%9C%8B%E4%BB%A3%E7%A0%81.png" width="70%" height="30%"><br>在文本框中粘贴复制的代码<br><img src="http://ozkg680jm.bkt.clouddn.com/%E7%B2%98%E8%B4%B4%E4%BB%A3%E7%A0%81.png" width="70%" height="30%"><br>关闭窗口，点击运行&gt;宏   </p>
 <p><img src="http://ozkg680jm.bkt.clouddn.com/%E8%BF%90%E8%A1%8C.png" width="70%" height="30%"><br>一会儿就合并好了，但是这个表格并不符合我们的要求，这时善用排序功能，就行了。<br><img src="http://ozkg680jm.bkt.clouddn.com/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5.jpg" width="70%" height="30%">      </p>
 
         </div>
@@ -274,7 +243,7 @@ MyName = Dir(MyPath &amp; <span class="string">"\" &amp; "</span>*.xls<span clas
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-03-31T02:45:54.000Z" itemprop="dateUpdated">2018-03-31 10:45:54</time>
+    Last updated: <time datetime="2018-04-08T04:48:26.942Z" itemprop="dateUpdated">2018-04-08 12:48:26</time>
 </span><br>
 
 

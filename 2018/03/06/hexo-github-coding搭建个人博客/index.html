@@ -232,7 +232,7 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             
-            <script src="/assets/js/APlayer.min.js"> </script><p>常见的博客系统有简书、新浪博客等等然而这些大多是使用官方域名，博客样式也比较单一，优点是容易上手，不必太注重编辑语法，缺点是博客的样式比较单一44，无法使用自己的域名，同时也就意味访问量注定不高，随着QQ空间、微信朋友圈的流行，人们对博客的浏览也越来越少，然而QQ空间、微信朋友圈大多以生活记录、趣事分享为主，虽然微信公众号经常会发布一些资讯、技术帖，然而微信客户端的限制注定无法满足人们的需要，仅仅从经验分享、交流而言。博客还是有存在的必要的。<br><a id="more"></a></p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>常见的博客系统有简书、新浪博客等等然而这些大多是使用官方域名，博客样式也比较单一，优点是容易上手，不必太注重编辑语法，缺点是博客的样式比较单一，无法使用自己的域名，同时也就意味访问量注定不高，随着QQ空间、微信朋友圈的流行，人们对博客的浏览也越来越少，然而QQ空间、微信朋友圈大多以生活记录、趣事分享为主，虽然微信公众号经常会发布一些资讯、技术帖，然而微信客户端的限制注定无法满足人们的需要，仅仅从经验分享、交流而言。博客还是有存在的必要的。<br><a id="more"></a></p>
 <h3 id="胡说八道"><a href="#胡说八道" class="headerlink" title="胡说八道"></a>胡说八道</h3><blockquote>
 <p>我为什么搭建博客？为什么不是WordPress而是Hexo？   </p>
 </blockquote>
@@ -258,20 +258,17 @@
 </tr>
 </tbody>
 </table>
-<p>虽然你可以在路由器上面跑<code>WordPress</code>,前提是你对<em>Linux</em>比较熟悉同时向宽带运营商提供固定的公网IP，公网IP资源相对比较匮乏，直接购买比较昂贵，向宽带运营商索要是不错的选择。当然如果你经常使用<code>Shadowsocks</code>(酸酸乳)的话，直接搭载同一台主机上面就行了，这样不至于性能过剩。而Hexo搭建静态博客是使用了<code>Github</code>和<code>Coding</code>提供的<strong><em>Pages</em></strong>服务，这个是比较稳定的，<strong><em>Github</em></strong>作为全球最大的开源社区，安全性和稳定性肯定不用担心，我们使用的<em>Pages</em>服务仅仅是<a href="https://github.com/" target="_blank" rel="noopener">Github</a>的冰山一角而已，或许从搭建blog以后你就会感受到Github的魅力。   </p>
+<p>虽然你可以在路由器上面跑<code>WordPress</code>,前提是你对<em>Linux</em>比较熟悉同时有宽带运营商提供固定的公网IP，公网IP资源相对比较匮乏，直接购买比较昂贵，向宽带运营商索要是不错的选择。当然如果你经常使用<code>Shadowsocks</code>(酸酸乳)的话，直接搭载同一台主机上面就行了，这样不至于性能过剩。而Hexo搭建静态博客是使用了<code>Github</code>和<code>Coding</code>提供的<strong><em>Pages</em></strong>服务，这个是比较稳定的，<strong><em>Github</em></strong>作为全球最大的开源社区，安全性和稳定性肯定不用担心，我们使用的<em>Pages</em>服务仅仅是<a href="https://github.com/" target="_blank" rel="noopener">Github</a>的冰山一角而已，或许从搭建blog以后你就会感受到Github的魅力。   </p>
 <h3 id="必备组件"><a href="#必备组件" class="headerlink" title="必备组件"></a>必备组件</h3><ul>
 <li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> </li>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>   </li>
 </ul>
 <blockquote>
-<p>Notice: 根据你使用的操作系统下载安装对于的版本即可，Linux和macOS可以通过命令行安装，对于macOS，安装包管理软件之后就可以通过源安装，不过不推荐这种方式，因为可能会用到root权限，这样以后生成、部署就比较麻烦。如果从来没有用过命令行，建议了解一下通配符。   </p>
+<p>Notice: 根据你使用的操作系统下载安装对于的版本即可，Linux和macOS可以通过命令行安装，对于macOS，安装包管理软件之后就可以通过源安装，对于新手不推荐使用这种方式，因为可能会用到root权限，这样以后生成、部署就比较麻烦。如果从来没有用过命令行，建议了解一下通配符。   </p>
 </blockquote>
-<h4 id="Linux下在Terminal下面输入以下命令安装git和Node-js"><a href="#Linux下在Terminal下面输入以下命令安装git和Node-js" class="headerlink" title="Linux下在Terminal下面输入以下命令安装git和Node.js"></a>Linux下在Terminal下面输入以下命令安装<code>git</code>和<code>Node.js</code></h4><pre><code class="bash">sudo apt-get update       <span class="comment">#检查更新</span>
-sudo apt-get install git    <span class="comment">#安装Git</span>
-sudo apt-get install nodejs    <span class="comment">#安装nodejs</span>
-</code></pre>
+<h4 id="Linux下安装git和Node-js"><a href="#Linux下安装git和Node-js" class="headerlink" title="Linux下安装git和Node.js"></a>Linux下安装<code>git</code>和<code>Node.js</code></h4><p>通过下面命令安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update      //检查更新</span><br><span class="line">sudo apt-get install git    //安装Git</span><br><span class="line">sudo apt-get install nodejs    //安装nodejs</span><br></pre></td></tr></table></figure></p>
 <p>估计用<code>Linux</code>的用户应该看看官方的说明文档就会了。所以下面以<code>Windows</code>和<code>macOS</code>为例。其中macOS可以安装包管理软件来安装必须组件，例如MacPorts，Homebrew，Fink。     </p>
-<h4 id="git、Node-js下载"><a href="#git、Node-js下载" class="headerlink" title="git、Node.js下载"></a>git、Node.js下载</h4><p>下面链接均为64位系统长期支持版本。32位系统<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">点击这里</a>       </p>
+<h4 id="git、Node-js下载"><a href="#git、Node-js下载" class="headerlink" title="git、Node.js下载"></a>git、Node.js下载</h4><p>Windows、macOS通过下载安装包安装<br>下面链接均为64位系统长期支持版本。32位系统<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">点击这里</a>       </p>
 <blockquote>
 <p>Node.js</p>
 <ul>
@@ -286,11 +283,10 @@ sudo apt-get install nodejs    <span class="comment">#安装nodejs</span>
 <li><a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-32-bit.exe" target="_blank" rel="noopener">Windows</a> </li>
 </ul>
 </blockquote>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><pre><code class="bash">npm install hexo-cli -g     <span class="comment">#安装Hexo</span>
-hexo init blog              <span class="comment">#初始化博客</span>
-<span class="built_in">cd</span> blog                     <span class="comment">#进入博客根目录</span>
-npm install                 <span class="comment">#安装hexo到博客根目录</span>
-</code></pre>
+<h4 id="macOS通过brew安装"><a href="#macOS通过brew安装" class="headerlink" title="macOS通过brew安装"></a>macOS通过brew安装</h4><p>macOS可以使用上面的方法下载安装包安装，而我更喜欢通过<code>brew</code>和<code>command line</code>安装，使用这种方法安装，你必须先安装包管理软件<code>brew</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<p>安装好<code>brew</code>后，键入以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install git         <span class="comment">#安装git</span></span><br><span class="line">brew install nodejs      <span class="comment">#安装Node.js</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g     <span class="comment">#安装Hexo</span></span><br><span class="line">hexo init blog              <span class="comment">#初始化博客</span></span><br><span class="line"><span class="built_in">cd</span> blog                     <span class="comment">#进入博客根目录</span></span><br><span class="line">npm install                 <span class="comment">#安装hexo到博客根目录</span></span><br></pre></td></tr></table></figure>
 <p>(未完待续)</p>
 
         </div>
@@ -299,7 +295,7 @@ npm install                 <span class="comment">#安装hexo到博客根目录<
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-03-22T03:54:24.000Z" itemprop="dateUpdated">2018-03-22 11:54:24</time>
+    Last updated: <time datetime="2018-04-08T04:40:38.406Z" itemprop="dateUpdated">2018-04-08 12:40:38</time>
 </span><br>
 
 
@@ -345,7 +341,7 @@ npm install                 <span class="comment">#安装hexo到博客根目录<
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/03/06/hexo-github-coding搭建个人博客/&title=《hexo+github/coding搭建个人博客》 — Zip的小窝&source=常见的博客系统有简书、新浪博客等等然而这些大多是使用官方域名，博客样式也比较单一，优点是容易上手，不必太注重编辑语法，缺点是博客的样式比较单一44，无法使..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/03/06/hexo-github-coding搭建个人博客/&title=《hexo+github/coding搭建个人博客》 — Zip的小窝&source=常见的博客系统有简书、新浪博客等等然而这些大多是使用官方域名，博客样式也比较单一，优点是容易上手，不必太注重编辑语法，缺点是博客的样式比较单一，无法使用自..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -414,7 +410,7 @@ npm install                 <span class="comment">#安装hexo到博客根目录<
         <aside class="post-widget">
             <nav class="post-toc-wrap" id="post-toc">
                 <strong>目录</strong>
-                <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#胡说八道"><span class="post-toc-number">1.</span> <span class="post-toc-text">胡说八道</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#必备组件"><span class="post-toc-number">2.</span> <span class="post-toc-text">必备组件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Linux下在Terminal下面输入以下命令安装git和Node-js"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Linux下在Terminal下面输入以下命令安装git和Node.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#git、Node-js下载"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">git、Node.js下载</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Hexo"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装Hexo</span></a></li></ol>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#胡说八道"><span class="post-toc-number">1.</span> <span class="post-toc-text">胡说八道</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#必备组件"><span class="post-toc-number">2.</span> <span class="post-toc-text">必备组件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Linux下安装git和Node-js"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Linux下安装git和Node.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#git、Node-js下载"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">git、Node.js下载</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#macOS通过brew安装"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">macOS通过brew安装</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Hexo"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装Hexo</span></a></li></ol>
             </nav>
             <div class="toc-bar"><div>
         </aside>
@@ -512,7 +508,7 @@ npm install                 <span class="comment">#安装hexo到博客根目录<
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/03/06/hexo-github-coding搭建个人博客/&title=《hexo+github/coding搭建个人博客》 — Zip的小窝&source=常见的博客系统有简书、新浪博客等等然而这些大多是使用官方域名，博客样式也比较单一，优点是容易上手，不必太注重编辑语法，缺点是博客的样式比较单一44，无法使..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/03/06/hexo-github-coding搭建个人博客/&title=《hexo+github/coding搭建个人博客》 — Zip的小窝&source=常见的博客系统有简书、新浪博客等等然而这些大多是使用官方域名，博客样式也比较单一，优点是容易上手，不必太注重编辑语法，缺点是博客的样式比较单一，无法使用自..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
