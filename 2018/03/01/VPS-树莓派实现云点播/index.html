@@ -234,7 +234,7 @@
             
             <script src="/assets/js/APlayer.min.js"> </script><p>本文将介绍如何使用下载工具<em>Xware</em>（迅雷远程下载）以及Emby来实现云点播，下载工具万万千千，为什么我们要用<em>Xware</em>？大家熟知的下载神器除了迅雷还有<em>Aria2</em>、<em>Transmission</em>；其实这些也是可以用的，只不过个人感觉<code>迅雷</code>下载快一点，同样对于媒体服务而言除了<em>Emby</em>还有<em>Plex</em>，只不过这个<code>Plex</code>安卓端播放是需要会员的，因此这里使用<code>Xware</code>和<code>Emby</code>如果你有个开发板或者VPS，接下来就开始折腾。<br><a id="more"></a>       </p>
 <h2 id="Install-Xware"><a href="#Install-Xware" class="headerlink" title="Install Xware"></a>Install Xware</h2><p>安装<em>Xware</em>之前，我们需要安装<em>Docker</em>，而Docker只能安装在64位的电脑上面，这里我的VPS使用的是<code>CentOS6 x64</code>，输入以下命令安装：    </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/docker | sh      <span class="comment">#安装Docker</span></span></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/docker | sh      <span class="comment">#安装Docker</span></span><br></pre></td></tr></table></figure>
 <p>树莓派直接使用该命令<code>sudo apt-get install docker.io</code>安装<em>Docker</em>，安装好<code>Docker</code>之后，我们来下载<em>Xware</em>的镜像，这些镜像你可以在<a href="www.daocloud.io">DaoCloud</a>上面下载，对于VPS使用这个镜像<code>caiguai/docker-xware</code>树莓派使用这个<code>zxq1002/docker-thunder-xware</code>镜像  </p>
 <h3 id="caiguai-docker-xware"><a href="#caiguai-docker-xware" class="headerlink" title="caiguai/docker-xware"></a>caiguai/docker-xware</h3><p>在终端中依次输入以下命令：     </p>
 <p>拉取最新镜像：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull caiguai/docker-xware:latest</span><br></pre></td></tr></table></figure></p>
@@ -278,10 +278,10 @@
 <p>升级<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull emby/embyserver:latest</span><br></pre></td></tr></table></figure></p>
 <p>当然你也可以使用第三方镜像</p>
 <p>安装完毕后，打开<code>http://localhost:8096</code>,这里的<code>localhost</code>是ip地址，VPS填写公网IP，树莓派填写局域网IP。</p>
-<div id="aplayer5" class="aplayer" style="margin-bottom: 20px;"></div>
+<div id="aplayer3" class="aplayer" style="margin-bottom: 20px;"></div>
 		<script>
 			var ap = new APlayer({
-				element: document.getElementById("aplayer5"),
+				element: document.getElementById("aplayer3"),
 				narrow: false,
 				autoplay: true,
 				showlrc: 0,
@@ -302,7 +302,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-03-31T02:52:21.563Z" itemprop="dateUpdated">2018-03-31 10:52:21</time>
+    Last updated: <time datetime="2018-03-31T02:52:21.000Z" itemprop="dateUpdated">2018-03-31 10:52:21</time>
 </span><br>
 
 
