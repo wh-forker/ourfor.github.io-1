@@ -266,6 +266,36 @@
 <hr>
 <hr>
 <hr>
+<p><div id="app"></div><br><!-- 加载 cplayer 脚本 --></p>
+<script src="https://cdn.jsdelivr.net/gh/MoePlayer/cPlayer/dist/cplayer.js"></script>
+<script>
+  let player = new cplayer({
+    element: document.getElementById('app'),
+    autoplay: true,
+    showPlaylist: true,
+    playlist: [
+      {
+        src: 'http://p5culcl8r.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0-%E9%86%89%E8%B5%A4%E5%A3%81.flac',
+        poster: 'http://p5culcl8r.bkt.clouddn.com/nice.jpg',
+        name: '醉赤壁',
+        artist: '林俊杰',
+      },
+      {
+        src: 'http://p5culcl8r.bkt.clouddn.com/%E5%B9%BF%E4%B8%9C%E9%9B%A8%E7%A5%9E-%E5%B9%BF%E4%B8%9C%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B.mp3',
+        poster: 'http://p5culcl8r.bkt.clouddn.com/nice.jpg',
+        name: '广东爱情故事',
+        artist: '广东雨神',
+      },
+      {
+        src: 'http://p5culcl8r.bkt.clouddn.com/%E5%8D%97%E5%AE%AB%E5%98%89%E9%AA%8F,%E5%A7%9C%E7%8E%89%E9%98%B3-%E5%9B%9E%E5%BF%86%E6%80%BB%E6%83%B3%E5%93%AD.flac',
+        poster: 'http://p5culcl8r.bkt.clouddn.com/nice.jpg',
+        name: '回忆总想哭',
+        artist: '南宫嘉骏,姜玉阳',
+      }     
+    ]
+  })
+</script>
+
 <figure class="image-box">
                 <img src="http://p5culcl8r.bkt.clouddn.com/g++_-v.png" alt="gcc/g++" title="" class="">
                 <p>gcc/g++</p>
@@ -305,7 +335,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-11T15:11:15.218Z" itemprop="dateUpdated">2018-04-11 23:11:15</time>
+    Last updated: <time datetime="2018-04-12T08:51:22.328Z" itemprop="dateUpdated">2018-04-12 16:51:22</time>
 </span><br>
 
 
