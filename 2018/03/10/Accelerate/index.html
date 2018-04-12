@@ -251,41 +251,45 @@
 <h6 id="第三境"><a href="#第三境" class="headerlink" title="第三境"></a>第三境</h6><p>众里寻他千百度，蓦然回首，那人却在灯火阑珊处</p>
 </div>
 <h5 id="T-1"><a href="#T-1" class="headerlink" title="..T"></a>..T</h5></div>
-<div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div>
-		<script>
-			var ap = new APlayer({
-				element: document.getElementById("aplayer0"),
-				narrow: false,
-				autoplay: false,
-				showlrc: 0,
-				music: {
-					title: "123我爱你",
-					author: "新乐尘符",
-					url: "http://ozkg680jm.bkt.clouddn.com/%E6%96%B0%E4%B9%90%E5%B0%98%E7%AC%A6-123%E6%88%91%E7%88%B1%E4%BD%A0.flac",
-					pic: "http://ozkg680jm.bkt.clouddn.com/%E6%96%B0%E4%B9%90%E5%B0%98%E7%AC%A6.jpg",
-				}
-			});
-			window.aplayers || (window.aplayers = []);
-			window.aplayers.push(ap);
-		</script> 
-<div id="aplayer1" class="aplayer" style="margin-bottom: 20px;"></div>
-		<script>
-			var ap = new APlayer({
-				element: document.getElementById("aplayer1"),
-				narrow: false,
-				autoplay: false,
-				showlrc: 0,
-				music: {
-					title: "雨蝶",
-					author: "G.E.M. 邓紫棋",
-					url: "http://ozkg680jm.bkt.clouddn.com/G.E.M.%20%E9%82%93%E7%B4%AB%E6%A3%8B-%E9%9B%A8%E8%9D%B6.mp3",
-					pic: "http://ozkg680jm.bkt.clouddn.com/G.E.M..jpg",
-				}
-			});
-			window.aplayers || (window.aplayers = []);
-			window.aplayers.push(ap);
-		</script>
-<p><--2018-03-10 14:25:07--=""> </--2018-03-10></p>
+<p><div id="app"></div><br><!-- 加载 cplayer 脚本 --></p>
+<script src="https://cdn.jsdelivr.net/gh/MoePlayer/cPlayer/dist/cplayer.js"></script>
+<script>
+  let player = new cplayer({
+    element: document.getElementById('app'),
+    autoplay: true,
+    showPlaylist: true,
+    playlist: [
+      {
+        src: 'http://ozkg680jm.bkt.clouddn.com/%E6%96%B0%E4%B9%90%E5%B0%98%E7%AC%A6-123%E6%88%91%E7%88%B1%E4%BD%A0.flac',
+        poster: 'http://ozkg680jm.bkt.clouddn.com/%E6%96%B0%E4%B9%90%E5%B0%98%E7%AC%A6.jpg',
+        name: '123我爱你',
+        artist: '新乐尘符'
+      },
+      {
+        src: 'http://ozkg680jm.bkt.clouddn.com/G.E.M.%20%E9%82%93%E7%B4%AB%E6%A3%8B-%E9%9B%A8%E8%9D%B6.mp3',
+        poster: 'http://ozkg680jm.bkt.clouddn.com/G.E.M..jpg',
+        name: '雨蝶',
+        artist: 'G.E.M. 邓紫棋'
+      }
+    ]
+  })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
         
@@ -293,7 +297,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-12T08:54:30.179Z" itemprop="dateUpdated">2018-04-12 16:54:30</time>
+    Last updated: <time datetime="2018-04-12T09:16:11.779Z" itemprop="dateUpdated">2018-04-12 17:16:11</time>
 </span><br>
 
 
