@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     
     
-    <title>数据结构 | Zip的小窝</title>
+    <title>数据结构-顺序表 | Zip的小窝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="读书笔记">
+    <meta name="keywords" content="读书笔记,数据结构">
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.2.8">
     
@@ -151,7 +151,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">
-            <span>数据结构</span>
+            <span>数据结构-顺序表</span>
             
         </div>
         
@@ -164,7 +164,7 @@
 <header class="content-header post-header">
     <img src="/img/水果2.jpg" class="header-bg">
     <div class="container fade-scale">
-        <h1 class="title">数据结构</h1>
+        <h1 class="title">数据结构-顺序表</h1>
         <h5 class="subtitle">
             
                 <time datetime="2018-03-27T11:20:05.000Z" itemprop="datePublished" class="page-time">
@@ -200,7 +200,7 @@
     <article id="post-数据结构"
   class="post-article article-type-post" itemprop="blogPost">
     <div class="post-card">
-        <h1 class="post-card-title">数据结构</h1>
+        <h1 class="post-card-title">数据结构-顺序表</h1>
         <div class="post-meta">
             <time class="post-time" title="2018-03-27 19:20:05" datetime="2018-03-27T11:20:05.000Z"  itemprop="datePublished">2018-03-27</time>
 
@@ -210,7 +210,7 @@
 
 
             
-	<span id="/2018/03/27/数据结构/" class="leancloud_visitors" data-flag-title="数据结构" title="数据结构">
+	<span id="/2018/03/27/数据结构/" class="leancloud_visitors" data-flag-title="数据结构-顺序表" title="数据结构-顺序表">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -232,8 +232,20 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             
-            <script src="/assets/js/APlayer.min.js"> </script><p>又到周末了，第一天上机结果IDE都没有找到，感觉是不是自己命令行用习惯了，基本的编译器都不会用了，还好在下机前5分钟找到了IDE，每周总要做做笔记啥的，这次上机的内容还算简单。<br><a id="more"></a></p>
-<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>线性表根据存储方式不同可以分为<code>顺序表</code>和<code>链表</code>，其中以顺式存储的线性表叫做顺序表，以链式存储的线性表叫做链表。这两种表有各自的优缺点：</p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>又到周末了，第一天上机结果IDE都没有找到，感觉是不是自己命令行用习惯了，基本的编译器都不会用了，还好在下机前5分钟找到了IDE，每周总要做做笔记啥的，这周主要学了线性表，感觉线性表这东西老师讲的很清楚了，保存思考还是把它写下来吧，或许几个月以后我对它的理解又更进一步了。总之，这次上机的内容还算简单。<br><a id="more"></a><br>感觉这<strong><em>《数据结构》</em></strong>这门课还是挺有意思的，上课的时候不仅分析算法还补充下语法，我呢平时基本不做预习这东西，可能是以前高中自学高数留下来的坏毛病吧，不过老师上课讲的东西我的脑子里面记得还是很清楚的，回头看看书感觉更好了。我在枕头旁边放了两本数据结构，基本没翻，要是睡觉的时候会自动扩散到脑子里面就好了。平时没事会把代码输电脑里面进来，最后同步到仓库。其实我更喜欢在纸上写好代码之后再输进电脑，不知道为什么老是有这种感觉感觉只有一打开电脑又得浪费不少时间。</p>
+<details><summary>我在GitHub上面的主页</summary><br><br><a href="https://github.com/ourfor" target="_blank" rel="noopener">Ourfor</a><br><a href="https://github.com/ourfor/My-C-Learning" target="_blank" rel="noopener">我的C/C++学习</a><br></details>
+
+<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>有必要弄清以下几个概念：</p>
+<ul>
+<li>线性表</li>
+<li>顺序表</li>
+<li>链表</li>
+</ul>
+<details><summary>线性表</summary><br><br>我目前是这样理解的，线性表之所以叫线性表就是因为表中的数据元素之间存在一对一的关系，这就好比<strong><em>离散数学</em></strong>里面讲的序偶，除了表头元素和表尾元素外表中每个元素都有唯一的一个直接前驱和直接后继，这样就使得这些元素在表中元素的位置唯一确定，同时这个表就有了逻辑顺序，满足这种特性有数组、字串之类的。<br></details>
+
+
+
+<p>线性表根据存储方式不同可以分为<code>顺序表</code>和<code>链表</code>，其中以顺式存储的线性表叫做顺序表，以链式存储的线性表叫做链表。这两种表有各自的优缺点：</p>
 <table>
 <thead>
 <tr>
@@ -266,53 +278,27 @@
 <hr>
 <hr>
 <hr>
-<p><div id="app"></div><br><!-- 加载 cplayer 脚本 --></p>
-<script src="https://cdn.jsdelivr.net/gh/MoePlayer/cPlayer/dist/cplayer.js"></script>
-<script>
-  let player = new cplayer({
-    element: document.getElementById('app'),
-    autoplay: true,
-    showPlaylist: true,
-    playlist: [
-      {
-        src: 'http://p5culcl8r.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0-%E9%86%89%E8%B5%A4%E5%A3%81.flac',
-        poster: 'http://p5culcl8r.bkt.clouddn.com/nice.jpg',
-        name: '醉赤壁',
-        artist: '林俊杰',
-      },
-      {
-        src: 'http://p5culcl8r.bkt.clouddn.com/%E5%B9%BF%E4%B8%9C%E9%9B%A8%E7%A5%9E-%E5%B9%BF%E4%B8%9C%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B.mp3',
-        poster: 'http://p5culcl8r.bkt.clouddn.com/nice.jpg',
-        name: '广东爱情故事',
-        artist: '广东雨神',
-      },
-      {
-        src: 'http://p5culcl8r.bkt.clouddn.com/%E5%8D%97%E5%AE%AB%E5%98%89%E9%AA%8F,%E5%A7%9C%E7%8E%89%E9%98%B3-%E5%9B%9E%E5%BF%86%E6%80%BB%E6%83%B3%E5%93%AD.flac',
-        poster: 'http://p5culcl8r.bkt.clouddn.com/nice.jpg',
-        name: '回忆总想哭',
-        artist: '南宫嘉骏,姜玉阳',
-      }     
-    ]
-  })
-</script>
+<details><summary>前方高能</summary><br><br><br>最近刷抖音小视频刷到几首好听的歌<br><br><br><br><div id="app"></div><br><!-- 加载 cplayer 脚本 --><br><script src="https://cdn.jsdelivr.net/gh/MoePlayer/cPlayer/dist/cplayer.js"></script><br><script><br>  let player = new cplayer({<br>    element: document.getElementById(‘app’),<br>    autoplay: true,<br>    showPlaylist: true,<br>    playlist: [<br>      {<br>        src: ‘<a href="http://p5culcl8r.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0-%E9%86%89%E8%B5%A4%E5%A3%81.flac&#39;">http://p5culcl8r.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0-%E9%86%89%E8%B5%A4%E5%A3%81.flac&#39;</a>,<br>        poster: ‘<a href="http://p5culcl8r.bkt.clouddn.com/nice.jpg&#39;">http://p5culcl8r.bkt.clouddn.com/nice.jpg&#39;</a>,<br>        name: ‘醉赤壁’,<br>        artist: ‘林俊杰’,<br>      },<br>      {<br>        src: ‘<a href="http://p5culcl8r.bkt.clouddn.com/%E5%B9%BF%E4%B8%9C%E9%9B%A8%E7%A5%9E-%E5%B9%BF%E4%B8%9C%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B.mp3&#39;">http://p5culcl8r.bkt.clouddn.com/%E5%B9%BF%E4%B8%9C%E9%9B%A8%E7%A5%9E-%E5%B9%BF%E4%B8%9C%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B.mp3&#39;</a>,<br>        poster: ‘<a href="http://p5culcl8r.bkt.clouddn.com/nice.jpg&#39;">http://p5culcl8r.bkt.clouddn.com/nice.jpg&#39;</a>,<br>        name: ‘广东爱情故事’,<br>        artist: ‘广东雨神’,<br>      },<br>      {<br>        src: ‘<a href="http://p5culcl8r.bkt.clouddn.com/%E5%8D%97%E5%AE%AB%E5%98%89%E9%AA%8F,%E5%A7%9C%E7%8E%89%E9%98%B3-%E5%9B%9E%E5%BF%86%E6%80%BB%E6%83%B3%E5%93%AD.flac&#39;">http://p5culcl8r.bkt.clouddn.com/%E5%8D%97%E5%AE%AB%E5%98%89%E9%AA%8F,%E5%A7%9C%E7%8E%89%E9%98%B3-%E5%9B%9E%E5%BF%86%E6%80%BB%E6%83%B3%E5%93%AD.flac&#39;</a>,<br>        poster: ‘<a href="http://p5culcl8r.bkt.clouddn.com/nice.jpg&#39;">http://p5culcl8r.bkt.clouddn.com/nice.jpg&#39;</a>,<br>        name: ‘回忆总想哭’,<br>        artist: ‘南宫嘉骏,姜玉阳’,<br>      }<br>    ]<br>  })<br></script><br><br></details>
 
 <figure class="image-box">
                 <img src="http://p5culcl8r.bkt.clouddn.com/g++_-v.png" alt="gcc/g++" title="" class="">
                 <p>gcc/g++</p>
             </figure>
 <p>这是我所使用的编译器版本，如果遇到<code>malloc</code>出错，可以在预处理指令中加上<code>#include&lt;stdlib.h&gt;</code></p>
-<ul>
-<li>初始化</li>
-<li>输入、输出、查找</li>
-<li>插入、删除</li>
-<li>就地逆置</li>
-</ul>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>初始化只需要将成员<code>length</code>和<code>listsize</code>初始化`</p>
+<details><summary>顺序表基本操作</summary><br><br><br><em> 初始化
+</em> 输入、输出、查找<br><em> 插入、删除
+</em> 就地逆置<br><br></details>
+
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><details><summary>初始化只需要将成员<code>length</code>和<code>listsize</code>初始化`</summary><br></details></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-------------------线性表初始量-------------------</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_ADD_SIZE 10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//-------------------初始化线性表-------------------</span></span><br><span class="line"><span class="function">Status <span class="title">InitList</span><span class="params">(Sqlist &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//构造一个空的线性表L</span></span><br><span class="line">	T.elem=(ElemType *)<span class="built_in">malloc</span>(LIST_INIT_SIZE * <span class="keyword">sizeof</span>(ElemType));            </span><br><span class="line">	<span class="keyword">if</span>(!T.elem) <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">	T.length=<span class="number">0</span>;</span><br><span class="line">	T.listsize=LIST_INIT_SIZE;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"线性表初始化成功！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//InitList</span></span><br></pre></td></tr></table></figure>
 <h3 id="输入、输出、查找"><a href="#输入、输出、查找" class="headerlink" title="输入、输出、查找"></a>输入、输出、查找</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-------------------线性表数据的输出-------------------</span></span><br><span class="line"><span class="function">Status <span class="title">DisplayList</span><span class="params">(Sqlist T)</span></span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line">	ElemType * q=T.elem;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=T.length<span class="number">-1</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		q=T.elem+i;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; * q &lt;&lt; <span class="string">" "</span> ;</span><br><span class="line">		 </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//-------------------线性表数据输入-------------------</span></span><br><span class="line"><span class="function">Status <span class="title">InputList</span><span class="params">(Sqlist &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"线性表中有多少个元素："</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; T.length;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入线性表中的各个元素："</span>;</span><br><span class="line">	ElemType * p;</span><br><span class="line">	p=T.elem;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=T.length<span class="number">-1</span>;i++,p++)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; * p;</span><br><span class="line">	&#125;</span><br><span class="line">	DisplayList(T);</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//-------------------查找-------------------</span></span><br><span class="line"><span class="function">Status <span class="title">LocalList</span><span class="params">(Sqlist &amp;T,ElemType find_elem)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ElemType *p;</span><br><span class="line">	<span class="keyword">int</span> elem_num=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(p=T.elem;p&lt;T.elem + T.length - <span class="number">1</span>;p++)</span><br><span class="line">	&#123;</span><br><span class="line">		num+=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(*p==find_elem)&#123;</span><br><span class="line">			elem_num=num;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"元素"</span> &lt;&lt; find_elem &lt;&lt; <span class="string">"在线性表中位于第"</span> &lt;&lt; elem_num &lt;&lt; <span class="string">"个位置"</span>;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">			<span class="keyword">return</span> OK;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(elem_num==<span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">"表中不存在元素"</span> &lt;&lt; find_elem;</span><br><span class="line">	<span class="keyword">return</span> ERROR;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="插入、删除"><a href="#插入、删除" class="headerlink" title="插入、删除"></a>插入、删除</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-------------------线性表元素的插入-------------------</span></span><br><span class="line"><span class="function">Status <span class="title">InsertList</span><span class="params">(Sqlist &amp;T,<span class="keyword">int</span> i,ElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//在第i个元素之前插入，使其成为第i个元素，判断插入位置i的合法性</span></span><br><span class="line">	<span class="comment">//如果空间不够，重新分配空间</span></span><br><span class="line">	<span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;T.length+<span class="number">1</span>) <span class="built_in">exit</span>(ERROR);</span><br><span class="line">	<span class="keyword">if</span>(T.length&gt;=T.listsize) </span><br><span class="line">	&#123;</span><br><span class="line">		ElemType * newbase=(ElemType *)<span class="built_in">malloc</span>((LIST_INIT_SIZE+LIST_ADD_SIZE)*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">		T.elem=newbase;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(!T.elem) <span class="keyword">return</span> ERROR;             <span class="comment">//分配失败</span></span><br><span class="line">	<span class="comment">//i后面的元素后移</span></span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	ElemType * p=T.elem;</span><br><span class="line">	<span class="keyword">for</span>(j=T.length - <span class="number">1</span>;j&gt;=i - <span class="number">1</span>;j--) *(p + j + <span class="number">1</span>)=*(p + j);</span><br><span class="line">	*(T.elem + i - <span class="number">1</span>)=e;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"已将第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个位置插入元素"</span> &lt;&lt; e &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	T.length=T.length + <span class="number">1</span>;</span><br><span class="line">	DisplayList(T);</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//-------------------线性表元素的删除-------------------</span></span><br><span class="line"><span class="function">Status <span class="title">DeleteList</span><span class="params">(Sqlist &amp;T,<span class="keyword">int</span> i,ElemType &amp;f)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//删除位置的取值范围1&lt;=i&lt;=T.length</span></span><br><span class="line">	<span class="comment">//删除第i个元素，其他元素往前移</span></span><br><span class="line">	<span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;T.length) <span class="built_in">exit</span>(ERROR);</span><br><span class="line">	ElemType *p=T.elem + i;</span><br><span class="line">	f=*(p - <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">for</span>(j=i;j&lt;=T.length;*(p - <span class="number">2</span>)=*(p - <span class="number">1</span>),j++)</span><br><span class="line">		p++;</span><br><span class="line">	T.length=T.length<span class="number">-1</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"删除的元素为"</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	DisplayList(T);</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p></p>
+<h3 id="插入、删除"><a href="#插入、删除" class="headerlink" title="插入、删除"></a>插入、删除</h3><deltails><summary>插入与删除的基本思路</summary><br><br>顺序表插入元素主要操作应该是从输入流中获取用户输入的元素位置（插入位置）以及元素，插入位置后面的元素都要后移，如果空间不够，还应该重新申请空间，基本的算法应该是这样：<br>- 判断用户输入的插入位置是否正确，即参数合法性的问题<br>- 检查顺序表中是否还有足够的空间让用户插入元素，如果不够还得重新向系统申请空间<br>- 插入元素的位置确定后，应从表尾元素开始直到插入位置原来的元素，每个元素后移一个单位，插入完成后，顺序表中表示表中元素个数的<code>length + 1</code>，自此插入操作完成，最后还应将表中元素逐个输出，便于后续调试和检测。<br><br><br>—————————————————————————<br>—————————————————————————<br><br>                          手动滑稽<br><br>—————————————————————————<br>—————————————————————————<br>删除的思路与插入有所不同，首先你不需要考虑空间，正常的删除应该是输入待删除的位置，将删除的元素保存下来，从删除位置后的第一个元素开始逐个前移这样就自然完成了删除操作，最后<code>length - 1</code>。同时将表中元素逐个输出，以及删除的元素。<br><br>- 判断用户输入的位置是否合法<br>- 从删除位置后的第一个元素开始逐个前移，完成后更改成员<strong><em>length</em></strong>的值<br>- 输出现在表中的元素以及删除的元素<br><br></deltails>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-------------------线性表元素的插入-------------------</span></span><br><span class="line"><span class="function">Status <span class="title">InsertList</span><span class="params">(Sqlist &amp;T,<span class="keyword">int</span> i,ElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//在第i个元素之前插入，使其成为第i个元素，判断插入位置i的合法性</span></span><br><span class="line">	<span class="comment">//如果空间不够，重新分配空间</span></span><br><span class="line">	<span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;T.length+<span class="number">1</span>) <span class="built_in">exit</span>(ERROR);</span><br><span class="line">	<span class="keyword">if</span>(T.length&gt;=T.listsize) </span><br><span class="line">	&#123;</span><br><span class="line">		ElemType * newbase=(ElemType *)<span class="built_in">malloc</span>((LIST_INIT_SIZE+LIST_ADD_SIZE)*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">		T.elem=newbase;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(!T.elem) <span class="keyword">return</span> ERROR;             <span class="comment">//分配失败</span></span><br><span class="line">	<span class="comment">//i后面的元素后移</span></span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	ElemType * p=T.elem;</span><br><span class="line">	<span class="keyword">for</span>(j=T.length - <span class="number">1</span>;j&gt;=i - <span class="number">1</span>;j--) *(p + j + <span class="number">1</span>)=*(p + j);</span><br><span class="line">	*(T.elem + i - <span class="number">1</span>)=e;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"已将第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个位置插入元素"</span> &lt;&lt; e &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	T.length=T.length + <span class="number">1</span>;</span><br><span class="line">	DisplayList(T);</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//-------------------线性表元素的删除-------------------</span></span><br><span class="line"><span class="function">Status <span class="title">DeleteList</span><span class="params">(Sqlist &amp;T,<span class="keyword">int</span> i,ElemType &amp;f)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//删除位置的取值范围1&lt;=i&lt;=T.length</span></span><br><span class="line">	<span class="comment">//删除第i个元素，其他元素往前移</span></span><br><span class="line">	<span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;T.length) <span class="built_in">exit</span>(ERROR);</span><br><span class="line">	ElemType *p=T.elem + i;</span><br><span class="line">	f=*(p - <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">for</span>(j=i;j&lt;=T.length;*(p - <span class="number">2</span>)=*(p - <span class="number">1</span>),j++)</span><br><span class="line">		p++;</span><br><span class="line">	T.length=T.length<span class="number">-1</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"删除的元素为"</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	DisplayList(T);</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>全部<a href="https://github.com/ourfor/My-C-Learning/blob/master/C%2B%2B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8A%E6%9C%BA/SqList.cpp" target="_blank" rel="noopener">代码</a></p>
-<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><p>链表的定义：</p>
+<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><p>链表与顺序表不同</p>
+<p>链表的定义：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-------------------------定义结构体-------------------------</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;LNode;</span><br><span class="line"></span><br><span class="line">LNode *head;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>初始化</li>
@@ -335,7 +321,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-12T08:51:22.328Z" itemprop="dateUpdated">2018-04-12 16:51:22</time>
+    Last updated: <time datetime="2018-04-13T11:03:00.741Z" itemprop="dateUpdated">2018-04-13 19:03:00</time>
 </span><br>
 
 
@@ -360,7 +346,7 @@
         
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
 
             <div class="page-share-wrap">
     
@@ -369,7 +355,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ourfor.top/2018/03/27/数据结构/&title=《数据结构》 — Zip的小窝&pic=http://ourfor.top/img/zip.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ourfor.top/2018/03/27/数据结构/&title=《数据结构-顺序表》 — Zip的小窝&pic=http://ourfor.top/img/zip.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -381,7 +367,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/03/27/数据结构/&title=《数据结构》 — Zip的小窝&source=又到周末了，第一天上机结果IDE都没有找到，感觉是不是自己命令行用习惯了，基本的编译器都不会用了，还好在下机前5分钟找到了IDE，每周总要做做笔记啥的，这..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/03/27/数据结构/&title=《数据结构-顺序表》 — Zip的小窝&source=又到周末了，第一天上机结果IDE都没有找到，感觉是不是自己命令行用习惯了，基本的编译器都不会用了，还好在下机前5分钟找到了IDE，每周总要做做笔记啥的，这..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -393,7 +379,7 @@
       </li>
       
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据结构》 — Zip的小窝&url=http://ourfor.top/2018/03/27/数据结构/&via=http://ourfor.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据结构-顺序表》 — Zip的小窝&url=http://ourfor.top/2018/03/27/数据结构/&via=http://ourfor.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -536,7 +522,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ourfor.top/2018/03/27/数据结构/&title=《数据结构》 — Zip的小窝&pic=http://ourfor.top/img/zip.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ourfor.top/2018/03/27/数据结构/&title=《数据结构-顺序表》 — Zip的小窝&pic=http://ourfor.top/img/zip.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -548,7 +534,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/03/27/数据结构/&title=《数据结构》 — Zip的小窝&source=又到周末了，第一天上机结果IDE都没有找到，感觉是不是自己命令行用习惯了，基本的编译器都不会用了，还好在下机前5分钟找到了IDE，每周总要做做笔记啥的，这..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/03/27/数据结构/&title=《数据结构-顺序表》 — Zip的小窝&source=又到周末了，第一天上机结果IDE都没有找到，感觉是不是自己命令行用习惯了，基本的编译器都不会用了，还好在下机前5分钟找到了IDE，每周总要做做笔记啥的，这..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -560,7 +546,7 @@
       </li>
       
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据结构》 — Zip的小窝&url=http://ourfor.top/2018/03/27/数据结构/&via=http://ourfor.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据结构-顺序表》 — Zip的小窝&url=http://ourfor.top/2018/03/27/数据结构/&via=http://ourfor.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
