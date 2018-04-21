@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     
     
-    <title>声卡AlC255 | Zip的小窝</title>
+    <title>进制转化 | Zip的小窝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="alc255">
+    <meta name="keywords" content="读书笔记,栈">
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.2.8">
     
@@ -151,7 +151,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">
-            <span>声卡AlC255</span>
+            <span>进制转化</span>
             
         </div>
         
@@ -164,13 +164,15 @@
 <header class="content-header post-header">
     <img src="/img/水果2.jpg" class="header-bg">
     <div class="container fade-scale">
-        <h1 class="title">声卡AlC255</h1>
+        <h1 class="title">进制转化</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-12-10T08:08:35.000Z" itemprop="datePublished" class="page-time">
-  2017-12-10
+                <time datetime="2018-04-21T15:41:59.000Z" itemprop="datePublished" class="page-time">
+  2018-04-21
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
 
             
         </h5>
@@ -195,18 +197,20 @@
 
 
 <div class="container body-wrap">
-    <article id="post-声卡AlC255"
+    <article id="post-进制转化"
   class="post-article article-type-post" itemprop="blogPost">
     <div class="post-card">
-        <h1 class="post-card-title">声卡AlC255</h1>
+        <h1 class="post-card-title">进制转化</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-12-10 16:08:35" datetime="2017-12-10T08:08:35.000Z"  itemprop="datePublished">2017-12-10</time>
+            <time class="post-time" title="2018-04-21 23:41:59" datetime="2018-04-21T15:41:59.000Z"  itemprop="datePublished">2018-04-21</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
 
 
             
-	<span id="/2017/12/10/声卡AlC255/" class="leancloud_visitors" data-flag-title="声卡AlC255" title="声卡AlC255">
+	<span id="/2018/04/21/进制转化/" class="leancloud_visitors" data-flag-title="进制转化" title="进制转化">
 		
 			<i class="icon icon-eye"></i>
 		
@@ -217,8 +221,8 @@
             
     <span class="leancloud-comment">
         <i class="icon icon-comment-o"></i>
-        <a href="/2017/12/10/声卡AlC255/#comment">
-            <span class="valine-comment-count" data-xid="/2017/12/10/声卡AlC255/"></span>
+        <a href="/2018/04/21/进制转化/#comment">
+            <span class="valine-comment-count" data-xid="/2018/04/21/进制转化/"></span>
         </a>
     </span>
 
@@ -228,30 +232,40 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             
-            <script src="/assets/js/APlayer.min.js"> </script><p>之前发了小米笔记本air的黑苹果安装教程的帖子，黑苹果总算是安装上去了，可是还有许多问题没有解决,不过无线网卡和蓝牙就不要想了，但是还是要解决上网和声音的问题，声卡驱动不了视频都播放不了，QQ接收一个消息屏幕都会闪一下，总之，体验不大好，经过2个多月的接触，学习，以及在大佬（黑果小兵）的帮助下终于解决了大部分目前一可以解决的问题：<br><a id="more"></a>  </p>
-<ul>
-<li>声卡仿冒：首先感谢大佬的耐心帮助，@黑果小兵 ，仿冒了声卡，编译了声卡驱动。要知道这活可不是一般人能仿冒的，声卡仿冒了，终于不用忍受万能声卡驱动带来的种种不足，例如不能自动切换耳机、耳机有电流声以及声音太小。声卡alc255仿冒成功，注入ID等于27时效果最好，声卡驱动好了以后，是真的好用啊！<br><img src="http://ozkg680jm.bkt.clouddn.com/%E8%BE%93%E5%85%A5.png" width="70%" height="30%"><br><img src="http://ozkg680jm.bkt.clouddn.com/%E8%BE%93%E5%85%A5.png" width="70%" height="30%"></li>
+            <script src="/assets/js/APlayer.min.js"> </script><p>上个星期学了栈和队列，正好下个星期的上机作业是“进制转换”,一般进制转换是通过短除法（除k取余法）来转化，除完之后由下往上将这些数组合在一起,这不这好和栈的特点一样吗？嗯，顿时我的手就有点痒了，于是中午就敲了敲，下午Debug了一下，感觉这问题要考虑全面有点难啊，写个简单的得了。这大于10进制的还涉及字母，还是简单的考虑吧。<br><a id="more"></a></p>
+<h2 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h2><ul>
+<li>首先你得把用户输入的数转化为10进制(暂时不要考虑输入大于10进制)</li>
+<li>将十进制的数转化为其他进制(同样只考虑不大于10进制的)</li>
 </ul>
-<ul>
-<li>亮度调节：群友的帮助和自己爬贴终于解决了亮度调节，可以插上外置鼠标或者键盘在偏好设置-键盘-快捷键-显示器里面设置快捷键，或者直接在偏好设置-显示器里面调节滑块改变亮度，感觉会省电一些吧，反正看起来舒服多了。<br><img src="http://ozkg680jm.bkt.clouddn.com/%E4%BA%AE%E5%BA%A6.png" width="70%" height="30%"></li>
-</ul>
-<p>解决了8个苹果和四叶草启动跑代码，并且隐藏了部分不必要的启动项。<br>核心显卡目前完美驱动，有线网卡内建好了，<br><img src="http://ozkg680jm.bkt.clouddn.com/%E7%B3%BB%E7%BB%9F.png" width="70%" height="30%"></p>
-<p>好了感觉自己废话好多，别人都是开篇几张图后面全靠编，笔者我也忍不住放几张图出来<br><img src="http://ozkg680jm.bkt.clouddn.com/%E9%9F%B3%E9%A2%91.png" width="70%" height="30%"> </p>
-<p>福利来了，最新修改的efi文件<br>下载<br><a href="https://pan.baidu.com/s/1i5L7dS5" target="_blank" rel="noopener">https://pan.baidu.com/s/1i5L7dS5</a></p>
-<p>efi文件怎么替换就不用我多说了吧，尽管我之前也替换出错导致windows启动不了，也正是因为这个学到了不少东西。<br>最后附上大佬的博客：<br>  blog.daliansky.net<br>如果言论不当以及技术问题还请大佬指导</p>
-
+<div class="timeline">
+<h5 id="输入数-eg-1998-类型为int，以及对应的进制k"><a href="#输入数-eg-1998-类型为int，以及对应的进制k" class="headerlink" title="输入数(eg:1998),类型为int，以及对应的进制k"></a>输入数(eg:1998),类型为<strong><em>int</em></strong>，以及对应的进制<code>k</code></h5><div class="item">
+<h6 id="将组成这个数的这些数字分开，1-9-9-8"><a href="#将组成这个数的这些数字分开，1-9-9-8" class="headerlink" title="将组成这个数的这些数字分开，1 9 9 8"></a>将组成这个数的这些数字分开，1 9 9 8</h6><p>这里并不能用<code>char</code> 来分开它们，因为<code>数据类型</code> 不仅仅包含一个取值集合，同时也包含了定义在这个取值集合上的一组 <code>操作</code> ,可以通过<code>除10</code> 取余来分离</p>
+</div>
+<div class="item">
+<h6 id="转化为10进制"><a href="#转化为10进制" class="headerlink" title="转化为10进制"></a>转化为10进制</h6><p>将分离出来的数字依次与对应的<code>k</code> 的幂相乘，最后求和</p>
+</div>
+<div class="item">
+<h6 id="除k取余，转化为k进制"><a href="#除k取余，转化为k进制" class="headerlink" title="除k取余，转化为k进制"></a>除k取余，转化为k进制</h6><p>这里使用<code>%</code> 求模，<code>int</code> 强制类型转化求商</p>
+</div>
+<h5 id="输出计算后的结果"><a href="#输出计算后的结果" class="headerlink" title="输出计算后的结果"></a>输出计算后的结果</h5></div>
+<p>(未完待续。。。。)</p>
+<p>代码已经同步到仓库：<a href="https://github.com/ourfor/My-C-Learning/blob/master/C%2B%2B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8A%E6%9C%BA/Stack.cpp" target="_blank" rel="noopener">Stuck</a></p>
+<figure class="image-box">
+                <img src="http://p5culcl8r.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-04-22%20%E4%B8%8A%E5%8D%8812.12.30.png" alt="花了我一个小时才配置好powerline&airline" title="" class="">
+                <p>花了我一个小时才配置好powerline&airline</p>
+            </figure>
         </div>
         
 <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-03-22T03:54:24.000Z" itemprop="dateUpdated">2018-03-22 11:54:24</time>
+    Last updated: <time datetime="2018-04-21T16:14:50.830Z" itemprop="dateUpdated">2018-04-22 00:14:50</time>
 </span><br>
 
 
         
-        转载注明出处，原文地址：<a href="/2017/12/10/声卡AlC255/" target="_blank" rel="external">http://ourfor.top/2017/12/10/声卡AlC255/</a>
+        转载注明出处，原文地址：<a href="/2018/04/21/进制转化/" target="_blank" rel="external">http://ourfor.top/2018/04/21/进制转化/</a>
         
     </div>
     <footer>
@@ -271,7 +285,7 @@
         
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/alc255/">alc255</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/栈/">栈</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
 
             <div class="page-share-wrap">
     
@@ -280,7 +294,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ourfor.top/2017/12/10/声卡AlC255/&title=《声卡AlC255》 — Zip的小窝&pic=http://ourfor.top/img/zip.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ourfor.top/2018/04/21/进制转化/&title=《进制转化》 — Zip的小窝&pic=http://ourfor.top/img/zip.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -292,25 +306,25 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2017/12/10/声卡AlC255/&title=《声卡AlC255》 — Zip的小窝&source=之前发了小米笔记本air的黑苹果安装教程的帖子，黑苹果总算是安装上去了，可是还有许多问题没有解决,不过无线网卡和蓝牙就不要想了，但是还是要解决上网和声音的..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/04/21/进制转化/&title=《进制转化》 — Zip的小窝&source=上个星期学了栈和队列，正好下个星期的上机作业是“进制转换”,一般进制转换是通过短除法（除k取余法）来转化，除完之后由下往上将这些数组合在一起,这不这好和栈..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://ourfor.top/2017/12/10/声卡AlC255/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://ourfor.top/2018/04/21/进制转化/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《声卡AlC255》 — Zip的小窝&url=http://ourfor.top/2017/12/10/声卡AlC255/&via=http://ourfor.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《进制转化》 — Zip的小窝&url=http://ourfor.top/2018/04/21/进制转化/&via=http://ourfor.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://ourfor.top/2017/12/10/声卡AlC255/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://ourfor.top/2018/04/21/进制转化/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -335,21 +349,14 @@
         
     </div>
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="prev">
-      <a href="/2018/01/01/开启hidpi/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">开启hidpi</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="next">
-      <a href="/2017/10/15/ESP分区/" id="post-next" class="post-nav-link">
+      <a href="/2018/04/07/Theme/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">ESP分区</h4>
+        <h4 class="title">MIUI Theme</h4>
       </a>
     </div>
   
@@ -357,6 +364,14 @@
 
 
     
+    
+        <aside class="post-widget">
+            <nav class="post-toc-wrap" id="post-toc">
+                <strong>目录</strong>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本思路"><span class="post-toc-number">1.</span> <span class="post-toc-text">基本思路</span></a></li></ol>
+            </nav>
+            <div class="toc-bar"><div>
+        </aside>
     
 </article>
 
@@ -439,7 +454,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ourfor.top/2017/12/10/声卡AlC255/&title=《声卡AlC255》 — Zip的小窝&pic=http://ourfor.top/img/zip.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ourfor.top/2018/04/21/进制转化/&title=《进制转化》 — Zip的小窝&pic=http://ourfor.top/img/zip.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -451,25 +466,25 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2017/12/10/声卡AlC255/&title=《声卡AlC255》 — Zip的小窝&source=之前发了小米笔记本air的黑苹果安装教程的帖子，黑苹果总算是安装上去了，可是还有许多问题没有解决,不过无线网卡和蓝牙就不要想了，但是还是要解决上网和声音的..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ourfor.top/2018/04/21/进制转化/&title=《进制转化》 — Zip的小窝&source=上个星期学了栈和队列，正好下个星期的上机作业是“进制转换”,一般进制转换是通过短除法（除k取余法）来转化，除完之后由下往上将这些数组合在一起,这不这好和栈..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://ourfor.top/2017/12/10/声卡AlC255/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://ourfor.top/2018/04/21/进制转化/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《声卡AlC255》 — Zip的小窝&url=http://ourfor.top/2017/12/10/声卡AlC255/&via=http://ourfor.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《进制转化》 — Zip的小窝&url=http://ourfor.top/2018/04/21/进制转化/&via=http://ourfor.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://ourfor.top/2017/12/10/声卡AlC255/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://ourfor.top/2018/04/21/进制转化/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -481,7 +496,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxUlEQVR42u3aQWrEMAwF0Ln/pdNtoST9kmyTgefVMBjnJQshS/p84nX9Wn//T3ZW94wWLi7umHs9rrs9d+fkxOfzb5+Fi4t7kPv8+CRgVV/y+fzb/3FxcV/JraY7+Zm4uLjfy60mJXnIw8XFfRs3ufzkVYtq8NpyV8PFxR1wq4gdv7fUd3FxcVvcq7h6IWzVwsXFPcPNA0p+XHJl6j0XFxf3DdykpZo3ZZOSa9TQxcXF3cytBprqoMbiIQxcXNwj3DyhmQS+eQjDxcU9yc3foHqlqY5oRA1aXFzcI9xq/yK//JSHKgalE1xc3B3c6ihVnspMyiiFgikuLu5SblJ6aH6DuBRS2I+Li3uEmycfkwJo/vLVD4GLi7ub20t0khSn/M2SaxIuLu5mbl6mrHJ7LdXyYBYuLu42bm/EatImycMcLi7u27h5EtPs1RQbLbi4uLu5V3FVrzq99kn5u+Li4i7l9oYw8nGrvAibJ0C4uLhnuHnQmZQ88j2jRAcXF3cptxdoqmMTo24PLi7u67mTdksS5nBxcb+L2wtGkyLIPz1hXFzcbdxeqzVHVNOdcpMVFxd3KbfX+OwVQapV21F9FxcXt8P9Acydw0L180bTAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxUlEQVR42u3aMW7DMAwF0Nz/0u6axe6nKLEu8DQFTmI/eSAokp9PvK6vdXfl+3p+z8+JhYuL2+Zej+vu1sm3z1u62/zzf3FxcSe5z4HmeQPJL/M7/GLDxcV9JTcPQHlwxMXF/b/c/DF5ooOLi/tmbhJ08lLI2vFp81kNFxe3wa0WN098PlLfxcXFXeJe7dVJaMrPwsXFHeFWg07eZM2/Te6Mi4s7z907JLEW7PLXgYuLO8PtjF90Up+kmLJ5MAsXFzfgVlunCbdaTCkMfuHi4o5w84RmV9tj84EHFxf3ALeKyIctOmnQ7evDxcUd5K41R6sjF50SKi4u7jx3bxiqBrvCi8PFxR3hdsJNtRi6Fs6iGTFcXNyt3LWiZ17+6HRDfjn84OLiHuPmjY285rrWRi2UYHBxcQ9z87CVF1LzZkm1EIOLizvDLbQxlmJk1NeNB8VwcXFnuFdx5S3ValO2kIvh4uIe5q4Fl7URrrVjEi4u7l9x8+NNngzlBZT8mISLizvP7Zc+z23jdvwCFxf3BdxqYbT6m2hLuLi4L+NW6dUyStKOxcXFneTmoSdKRII0aDG04eLijnDzgmmnEbLrOi4u7mHuDzI6i7JqIhoMAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
