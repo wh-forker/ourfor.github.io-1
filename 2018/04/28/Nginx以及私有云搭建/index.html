@@ -246,7 +246,20 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen -S lnmp          <span class="comment">#创建名为lnmp的对话窗口</span></span><br><span class="line">bash install.sh         <span class="comment">#执行安装脚本</span></span><br></pre></td></tr></table></figure>
 <p>安装过程我就不细说了，按照提示操作就可以了。</p>
-<h2 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h2><h2 id="ownCloud"><a href="#ownCloud" class="headerlink" title="ownCloud"></a>ownCloud</h2><ul>
+<h2 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h2><ul>
+<li>通过源码编译安装Nginx<br>通过源码编译安装<code>Nginx</code> 是为了能够使用<code>Nginx</code> 的一些模块，这里为了美化Nginx的目录浏览，会安装<code>Fancy Index module</code> ,<a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">Nginx源码</a>.下面我以<code>version=    1.14.0</code> 为例;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.14.0.tar.gz      <span class="comment">#你也可以选择使用curl下载</span></span><br><span class="line">gunzip -c nginx-1.14.0.tar.gz | tar -xvf -         <span class="comment">#解压源码压缩包到当前目录</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/aperezdc/ngx-fancyindex.git ngx-fancyindex   <span class="comment">#需要安装git</span></span><br><span class="line"><span class="built_in">cd</span> nginx-1.14.0              <span class="comment">#进入目标文件夹</span></span><br><span class="line">./configure --user=www --group=www --prefix=/usr/<span class="built_in">local</span>/nginx \      <span class="comment">#每条命令都要回车</span></span><br><span class="line">--with-http_stub_status_module \ </span><br><span class="line">--with-http_ssl_module \</span><br><span class="line">--with-http_v2_module \</span><br><span class="line">--with-http_gzip_static_module \ </span><br><span class="line">--with-ipv6 \ </span><br><span class="line">--with-http_sub_module \</span><br><span class="line">--add-module=../ngx-fancyindex              <span class="comment">#添加Fancy Index module</span></span><br><span class="line">make &amp;&amp; sudo make install                   <span class="comment">#编译并安装</span></span><br></pre></td></tr></table></figure>
+<p>安装好<code>Nginx</code> 之后我们需要简单设置一下来开启<code>目录浏览功能</code> 并启用<code>Fancy Index module</code> ,在<code>/usr/local/nginx/conf/nginx.conf</code> 中添加以下代码：</p>
+<p>service字段中添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">  fancyindex on;              <span class="comment"># Enable fancy indexes.</span></span><br><span class="line">  fancyindex_exact_size off;  <span class="comment"># Output human-readable file sizes.</span></span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">http字段中添加：</span><br><span class="line">```bash</span><br><span class="line">autoindex on;</span><br><span class="line">include fancyindex.conf;</span><br></pre></td></tr></table></figure></p>
+<p>接下来执行如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/TheInsomniac/Nginx-Fancyindex-Theme.git /usr/<span class="built_in">local</span>/nginx/fancyindex</span><br></pre></td></tr></table></figure></p>
+<p>效果预览：<a href="file.ourfor.top">@-@</a></p>
+<p>主题项目地址：</p>
+<ul>
+<li><a href="https://github.com/TheInsomniac/Nginx-Fancyindex-Theme.git" target="_blank" rel="noopener">TheInsomniac</a></li>
+<li><a href="https://github.com/Naereen/Nginx-Fancyindex-Theme.git" target="_blank" rel="noopener">Naereen</a></li>
+</ul>
+<h2 id="ownCloud"><a href="#ownCloud" class="headerlink" title="ownCloud"></a>ownCloud</h2><ul>
 <li><a href="https://owncloud.org/" target="_blank" rel="noopener">ownCloud</a></li>
 </ul>
 <p>首先你得有一个域名，大部分域名还是很便宜的，像阿里云、腾讯云的新用户首年1元的域名还是很多的<br>添加一个虚拟主机目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lnmp vhost add</span><br><span class="line">cloud.ourfor.top             <span class="comment">#你的域名，同时将域名dns解析到服务器ip</span></span><br></pre></td></tr></table></figure></p>
@@ -263,7 +276,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-28T05:07:45.151Z" itemprop="dateUpdated">2018-04-28 13:07:45</time>
+    Last updated: <time datetime="2018-04-30T06:19:00.249Z" itemprop="dateUpdated">2018-04-30 14:19:00</time>
 </span><br>
 
 
