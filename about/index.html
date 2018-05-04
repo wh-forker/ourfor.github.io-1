@@ -14,7 +14,7 @@
     <script type="text/javascript">
         // Data Center
         var DC = {
-            reward:	true,
+            reward:	false,
             lv: JSON.parse('{"enable":true,"app_id":"LQcg6cueG8cMcLf9gSrAhF6d-gzGzoHsz","app_key":"zAMFPgKrAh09qqQDGHvdU0Uq","icon":true}'),
             v: JSON.parse('{"enable":true,"appid":"LQcg6cueG8cMcLf9gSrAhF6d-gzGzoHsz","appkey":"zAMFPgKrAh09qqQDGHvdU0Uq","notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
             g: JSON.parse('{"enable":false,"lazy":true,"owner":"codefine","repo":"gitment","oauth":{"client_id":null,"client_secret":null},"perPage":10}')
@@ -119,6 +119,13 @@
             </li>
         
             <li class="">
+              <a href="/album"  >
+                <i class="icon icon-lg icon-photo"></i>
+                ALBUM
+              </a>
+            </li>
+        
+            <li class="">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 TAGS
@@ -129,6 +136,13 @@
               <a href="/about"  >
                 <i class="icon icon-lg icon-user"></i>
                 ABOUT
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="https://github.com/ourfor/My-C-Learning" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                STUDY
               </a>
             </li>
         
@@ -233,12 +247,6 @@
 
         </div>
         
-            <div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-            
-        
         
         <div class="card page-about-me flex-row">
             <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/zip.jpg"></a>
@@ -302,43 +310,8 @@
         </div>
         
         
-        <div class="card">   
-           
-    <div id="comment"></div>
-
-
-
-        </div>
-        
     </article>
     
-        <div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        我们一起来让这个世界有趣一点
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/reward-wechat.jpg" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/reward-wechat.jpg" data-alipay="/img/reward-alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
-    </div>
-</div>
-
-        
 </div>
 
         <footer class="footer">
@@ -474,13 +447,6 @@ var _hmt = _hmt || [];
 </script>
 
 
-
-    
-        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script type="text/javascript" src="/js/plugins/valine.js?v=1.2.8"></script>
-    
-    
 
 
 
