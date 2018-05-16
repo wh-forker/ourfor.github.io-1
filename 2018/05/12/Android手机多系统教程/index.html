@@ -282,7 +282,24 @@
 <li>解锁system分区</li>
 <li>解密data分区</li>
 </ul>
-<p>（未完待续…）</p>
+<h4 id="注意事项及常见问题"><a href="#注意事项及常见问题" class="headerlink" title="注意事项及常见问题"></a>注意事项及常见问题</h4><ul>
+<li>刷入系统后，先不要重启，复制内部存储下的<code>multiboot</code>文件夹📁下的启动文件到root分区，注意是root分区，不是boot分区，这样做是为了保证当data未解密时仍然能够通过recovery刷入boot镜像切回主系统，路径：<code>/storage/emulated/0/multiboot/</code>下面的所有文件夹复制到根目录的root分区</li>
+<li>解密<code>data</code>分区，使用twrp中的解密data，然后刷入supersu，防止data加密</li>
+<li>刷入<code>recovery</code>，推荐刷入T W R P，使用一键刷入recovery工具包</li>
+<li>处理刷机包，选择刷入分区，建议都安装在data分区</li>
+<li>下载刷机包，使用MT工具箱文本编辑，删除基带验证。</li>
+<li>带BL锁的，要先解BL锁。</li>
+<li>刷入<code>Supersu</code>，获取ROOT权限，同时还能防止data再次加密</li>
+<li>使用<code>syslock</code>解锁system分区，从而获取完整root权限，针对MIUI从官方下载root包获取的权限，如果使用Supersu获取的话可以忽略。</li>
+<li>刷入位置：推荐data分区，其他位置一般刷入失败的概率比较大，填写ID时，根据个人喜好填写，仅仅只是为了区分系统安装的位置而已。</li>
+<li>文件乱码，内部存储无读写权限：这种情况属于未解密data分区，可以在recovery中刷入你想启动的系统的boot.img文件，即可切回主系统。</li>
+<li>解密<code>data</code>会清空所有数据，所以提前备份好重要数据，推荐使用小米云服务备份。</li>
+<li>由于<code>8.x</code>系统分区结构改变，并且会自动加密data分区，dual boot patcher作者尚未更新，所以8.x系统大部分不能用作副系统。</li>
+<li>为除<code>主系统</code>外的其他系统刷入Supersu以及xposed都需要处理，处理方式与刷入系统方式相同，同时安装位置要与待安装到的系统位置相同，即填写id标识与系统相同。</li>
+<li>设置锁屏密码;刷入其他系统后，最多只能有一个系统设置锁屏密码，并且只有最后一次设置的密码能够解锁对应系统，其他系统均会出现密码错误。</li>
+<li>密码错误，无法解密:此时只需要在TWRP自带的Terminal下面删除锁屏密码保存的文件即可，锁屏密码锁在路径，系统的相对路径(系统安装位置)假设为～，密码保存文件位于：<code>~/data/system/</code>，以主系统为例 <code>cd /data/system</code>,查看文件<code>ls</code>,其他后缀名为 <strong><em>key</em></strong>的就是要删除的文件,<code>rm *.key</code>同样的，因为密码错误无法进入系统也可以删除对应的密码保存文件。</li>
+</ul>
+<h3 id="刷机指南"><a href="#刷机指南" class="headerlink" title="刷机指南"></a>刷机指南</h3><h4 id="通过Recovery-卡刷"><a href="#通过Recovery-卡刷" class="headerlink" title="通过Recovery 卡刷"></a>通过<code>Recovery</code> 卡刷</h4><h4 id="通过Fastboot-线刷"><a href="#通过Fastboot-线刷" class="headerlink" title="通过Fastboot 线刷"></a>通过<code>Fastboot</code> 线刷</h4><p>（未完待续…）</p>
 
         </div>
         
@@ -290,7 +307,7 @@
     <div class="content">
         
 <span class="post-time">
-    最後更新時間：<time datetime="2018-05-13T09:01:03.558Z" itemprop="dateUpdated">2018-05-13 17:01:03</time>
+    Last updated: <time datetime="2018-05-16T04:40:10.109Z" itemprop="dateUpdated">2018-05-16 12:40:10</time>
 </span><br>
 
 
@@ -398,7 +415,7 @@
         <aside class="post-widget">
             <nav class="post-toc-wrap" id="post-toc">
                 <strong>目录</strong>
-                <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用到工具"><span class="post-toc-number">1.</span> <span class="post-toc-text">用到工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#要求"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">要求</span></a></li></ol></li></ol>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用到工具"><span class="post-toc-number">1.</span> <span class="post-toc-text">用到工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#要求"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">要求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意事项及常见问题"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">注意事项及常见问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#刷机指南"><span class="post-toc-number">2.</span> <span class="post-toc-text">刷机指南</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通过Recovery-卡刷"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">通过Recovery 卡刷</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通过Fastboot-线刷"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">通过Fastboot 线刷</span></a></li></ol></li></ol>
             </nav>
             <div class="toc-bar"><div>
         </aside>
